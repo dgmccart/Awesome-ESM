@@ -49,4 +49,12 @@ jobs:
         with:
           folder: docsite # The folder the action should deploy.
           branch: gh-pages
-          target-folder: stable
+          target-folder: root
+
+      - name: Deploy 🚀
+        if: ((github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch'))
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docsite
+          branch: gh-pages
+          # Remove or change target-folder to deploy to root
