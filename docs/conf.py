@@ -41,9 +41,11 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
     "myst_nb",
+    "myst_parser",                    # For .md files
     "sphinx_immaterial",
     "sphinx_external_toc",
     "sphinx_design",
+    "sphinxext.opengraph",            # For OpenGraph metadata
 ]
 
 napoleon_custom_sections = ["Lifecycle"]
