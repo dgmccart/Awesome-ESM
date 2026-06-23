@@ -47,6 +47,10 @@ intersphinx_mapping = {
 # Paths and file configuration
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "README.md"]
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
 
 # External TOC
 external_toc_path = "_toc.yml"
