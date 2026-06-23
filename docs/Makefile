@@ -14,9 +14,6 @@ help:
 
 .PHONY: help Makefile
 
-changelog:
-	cp ../client/python/cryoet_data_portal/CHANGELOG.md $(SOURCEDIR)/full_changelog.md
-
 html: changelog
 	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
