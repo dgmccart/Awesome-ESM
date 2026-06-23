@@ -23,6 +23,19 @@ version = cryoet_data_portal.__version__
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+html_static_path = ['_static']
+html_css_files = [
+    'css/custom.css',
+]
+html_theme_options = {
+    'logo': {
+        'image_light': '_static/img/logo.svg',
+        'image_dark': '_static/img/logo.svg',
+    },
+    'color_primary': '#6E4FF9',  # Indigo500
+    'color_accent': '#F1F0FF',   # Indigo100
+}
+
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
