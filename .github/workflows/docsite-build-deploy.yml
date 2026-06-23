@@ -40,6 +40,7 @@ jobs:
         run: |
           cd docs/
           make clean && make html
+          mkdir -p ../docsite
           cp -r _build/html/* ../docsite/.
 
       - name: Deploy 🚀
