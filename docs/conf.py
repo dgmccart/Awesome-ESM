@@ -18,7 +18,6 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
     "myst_nb",
-    "myst_parser",  # For .md files
     "sphinx_immaterial",
     "sphinx_external_toc",
     "sphinx_design",
