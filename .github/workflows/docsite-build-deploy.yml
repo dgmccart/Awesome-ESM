@@ -1,6 +1,7 @@
 name: Build and Deploy Docsite
+
 on:
-  workflow_dispatch: # Used to make post-release docfixes
+  workflow_dispatch:
   pull_request:
     paths:
       - "docs/**"
@@ -17,6 +18,7 @@ jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v3
@@ -28,7 +30,7 @@ jobs:
       - name: Install Python deps 🔧
         run: |
           python -m pip install -U pip setuptools wheel
-          pip install -r ./docs/requirements.txt
+          pip install -r docs/requirements.txt
 
       - name: Install Pandoc
         run: |
@@ -39,16 +41,23 @@ jobs:
         run: |
           cd docs
           make clean
-          sphinx-build -b html -W . _build/html
-      
-      - name: Inspect build output
+          make html
+
+      - name: Disable Jekyll
         run: |
-          ls -lah docs/_build
-          ls -lah docs/_build/html
-          find docs/_build/html -maxdepth 2 | sort
-  
-      - name: Deploy
+          touch docs/_build/html/.nojekyll
+
+      - name: Verify build output
+        run: |
+          ls -la docs/_build/html
+          ls -la docs/_build/html/_static
+          ls -la docs/_build/html/.nojekyll
+
+      - name: Deploy 🚀
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: docs/_build/html
           branch: gh-pages
+          clean: true
+          single-commit: true
