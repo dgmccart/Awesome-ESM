@@ -88,8 +88,8 @@ html_theme_options = {
         {
             "media": "(prefers-color-scheme: light)",
             "scheme": "default",
-            "primary": "indigo",
-            "accent": "blue",
+            "primary": "custom",
+            "accent": "custom",
             "toggle": {
                 "icon": "material/lightbulb-outline",
                 "name": "Switch to dark mode",
@@ -98,8 +98,8 @@ html_theme_options = {
         {
             "media": "(prefers-color-scheme: dark)",
             "scheme": "slate",
-            "primary": "indigo",
-            "accent": "blue",
+            "primary": "custom",
+            "accent": "custom",
             "toggle": {
                 "icon": "material/lightbulb",
                 "name": "Switch to light mode",
