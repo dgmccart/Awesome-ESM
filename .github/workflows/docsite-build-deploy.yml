@@ -36,25 +36,14 @@ jobs:
           sudo apt-get install -y pandoc
 
       - name: Build Sphinx website
-        if: ((github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch'))
         run: |
-          cd docs/
-          make clean && make html
-          mkdir -p ../docsite
-          cp -r _build/html/* ../docsite/.
+          cd docs
+          make clean
+          make html
 
       - name: Deploy 🚀
         if: ((github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch'))
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: docsite # The folder the action should deploy.
+          folder: docs/_build/html
           branch: gh-pages
-          target-folder: root
-
-      - name: Deploy 🚀
-        if: ((github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch'))
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: docsite
-          branch: gh-pages
-          # Remove or change target-folder to deploy to root
