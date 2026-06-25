@@ -39,7 +39,13 @@ jobs:
         run: |
           cd docs
           make clean
-          make html
+          sphinx-build -b html -W . _build/html
+      
+      - name: Inspect build output
+        run: |
+          ls -lah docs/_build
+          ls -lah docs/_build/html
+          find docs/_build/html -maxdepth 2 | sort
   
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
