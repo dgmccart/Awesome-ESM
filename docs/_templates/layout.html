@@ -50,3 +50,8 @@
     </main>
 </div>
 {% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ pathto('_static/custom-nav.js', 1) }}"></script>
+{% endblock %}
