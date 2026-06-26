@@ -125,7 +125,7 @@ body {
 
 /* Search bar */
 .md-search__form, .md-search__form:hover {
-  background-color: var(--gray-600);
+  background-color: var(--white);
 }
 
 @media screen and (min-width: 1024px) {
