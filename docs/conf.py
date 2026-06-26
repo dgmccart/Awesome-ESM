@@ -44,7 +44,7 @@ intersphinx_mapping = {
 }
 
 # Paths and file configuration
-# templates_path = ["_templates"] # removed _templates folder due to it overriding the theme
+templates_path = ["_templates"] 
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "README.md"]
 
 # External TOC
