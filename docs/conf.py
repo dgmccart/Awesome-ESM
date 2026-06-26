@@ -65,54 +65,31 @@ html_js_files = ["js/faq.js", "js/version_redirect.js"]
 # html_logo = ""
 html_title = "Awesome-ESM Documentation"
 html_favicon = "_static/img/favicon.png"
-html_theme = "sphinx_book_theme" # "sphinx_immaterial"
+html_theme = "sphinx_book_theme"
 
 html_theme_options = {
-    "navbar_start": ["navbar_logo"],
-    "navbar_center": ["navbar_nav"],
-    "navbar_end": ["navbar_persistent_search", "icon_links"],
-    "icon": {
-        "repo": "fontawesome/brands/github",
-        "edit": "material/file-edit-outline",
+    "logo": {
+        "image_light": "_static/biohub-logo-dark.png",
+        "image_dark": "_static/biohub-logo-light.png",
     },
-    "site_url": "https://dgmccart.github.io/Awesome-ESM",
-    "repo_url": "https://github.com/dgmccart/Awesome-ESM/",
-    "repo_name": "Awesome-ESM",
-    "edit_uri": "blob/main/docs",
-    "globaltoc_collapse": False,
-    "features": [
-        "toc.follow",
-        "toc.sticky",
-        "announce.dismiss",
-    ],
-    "palette": [
-        {
-            "media": "(prefers-color-scheme: light)",
-            "scheme": "default",
-            "primary": "custom",
-            "accent": "custom",
-            "toggle": {
-                "icon": "material/lightbulb-outline",
-                "name": "Switch to dark mode",
-            },
-        },
-        {
-            "media": "(prefers-color-scheme: dark)",
-            "scheme": "slate",
-            "primary": "custom",
-            "accent": "custom",
-            "toggle": {
-                "icon": "material/lightbulb",
-                "name": "Switch to light mode",
-            },
-        },
-    ],
-    "font": {
-        "text": "Inter",  # used for all the pages' text
-        "code": "Roboto Mono",  # used for literal code blocks
+    "repository_url": "https://github.com/dgmccart/Awesome-ESM/",
+    "repository_branch": "main",
+    "path_to_docs": "docs",
+    "use_edit_page_button": True,
+    "use_repository_button": True,
+    "use_issues_button": True,
+    "sidebar": {
+        "persistent": True,
+        "width": "280px",
     },
-    "version_dropdown": False,  # Set to True if you have versioning
+    "pygments_style": "sphinx",
+    "pygments_dark_style": "monokai",
 }
+
+# Keep your custom CSS colors/fonts - Book theme respects them
+html_css_files = [
+    "custom.css",  # Your existing custom styles
+]
 
 # Remove icons from toc elements in API page
 object_description_options = [
