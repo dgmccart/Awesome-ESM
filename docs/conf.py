@@ -68,6 +68,9 @@ html_favicon = "_static/img/favicon.png"
 html_theme = "sphinx_immaterial"
 
 html_theme_options = {
+    "navbar_start": ["navbar_logo"],
+    "navbar_center": ["navbar_nav"],
+    "navbar_end": ["navbar_persistent_search", "icon_links"],
     "icon": {
         "repo": "fontawesome/brands/github",
         "edit": "material/file-edit-outline",
