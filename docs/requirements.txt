@@ -1,6 +1,7 @@
 # Core Sphinx
 sphinx
 myst-parser
+sphinx-book-theme
 
 # Theme
 sphinx-immaterial
