@@ -65,7 +65,7 @@ html_js_files = ["js/faq.js", "js/version_redirect.js"]
 # html_logo = ""
 html_title = "Awesome-ESM Documentation"
 html_favicon = "_static/img/favicon.png"
-html_theme = "sphinx_immaterial"
+html_theme = "sphinx_book_theme" # "sphinx_immaterial"
 
 html_theme_options = {
     "navbar_start": ["navbar_logo"],
