@@ -1,0 +1,67 @@
+{% import "partials/nav-item.html" as item with context %}
+
+{% set class = "md-nav md-nav--primary" %}
+{% if "toc.integrate" in features %}
+  {% set class = class ~ " md-nav--integrated" %}
+{% endif %}
+
+<nav
+  class="{{ class }}"
+  aria-label="{{ lang.t('nav') }}"
+  data-md-level="0"
+>
+
+  <!-- =======================================================
+       Biohub Sidebar Header
+       ======================================================= -->
+
+  <div class="md-sidebar-brand">
+
+    <a
+      href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}"
+      class="md-sidebar-brand__logo"
+      aria-label="{{ config.site_name }}"
+    >
+
+      <img
+        class="logo-light"
+        src="{{ pathto('_static/img/Biohub_black_text.png', 1) }}"
+        alt="Biohub"
+      >
+
+      <img
+        class="logo-dark"
+        src="{{ pathto('_static/img/Biohub_white_text.png', 1) }}"
+        alt="Biohub"
+      >
+
+    </a>
+
+    <div class="md-sidebar-brand__text">
+      <div class="md-sidebar-brand__title">
+        Awesome ESM
+      </div>
+    </div>
+
+    <button
+      class="md-sidebar-collapse"
+      aria-label="Collapse navigation"
+      title="Collapse navigation"
+    >
+      {% include ".icons/material/chevron-left.svg" %}
+    </button>
+
+  </div>
+
+  <!-- =======================================================
+       Navigation
+       ======================================================= -->
+
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for nav_item in nav %}
+      {% set path = "__nav_" ~ loop.index %}
+      {{ item.render(nav_item, path, 1) }}
+    {% endfor %}
+  </ul>
+
+</nav>
