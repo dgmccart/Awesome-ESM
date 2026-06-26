@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="CryoET Data Portal | Documentation" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dgmccart.github.io/cryoet_data_portal_docsite_landing.html" />
+<meta property="og:site_name" content="Awesome-ESM Documentation" />
+<meta property="og:description" content="The Chan Zuckerberg Institute for Advanced Biological Imaging (CZ Imaging Institute) has made a beta release of the CryoET Data Portal providing queryable and organized data from CryoET experiments..." />
+<meta property="og:image" content="https://dgmccart.github.io/_static/img/logo.svg" />
+<meta property="og:image:alt" content="Awesome-ESM Documentation" />
+<meta name="description" content="The Chan Zuckerberg Institute for Advanced Biological Imaging (CZ Imaging Institute) has made a beta release of the CryoET Data Portal providing queryable and organized data from CryoET experiments..." />
+
+    <title>CryoET Data Portal | Documentation &#8212; Awesome-ESM Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_immaterial_theme.140ae81b18dd3ac08.min.css?v=137fc61d" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cryoet_data_portal_docsite_landing';</script>
+    <script src="_static/js/faq.js?v=b6be1a0a"></script>
+    <script src="_static/js/version_redirect.js?v=80bed784"></script>
+    <link rel="icon" href="_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quickstart" href="cryoet_data_portal_docsite_quick_start.html" />
+    <link rel="prev" title="CryoET Data Portal | Documentation" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/biohub-logo-dark.png" class="logo__image only-light" alt="Awesome-ESM Documentation - Home"/>
+    <script>document.write(`<img src="_static/biohub-logo-light.png" class="logo__image only-dark" alt="Awesome-ESM Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_quick_start.html">Quickstart</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="python-api.html">Python API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html">API reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="full_changelog.html">Changelog</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_aws.html">Download Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_napari.html">Using napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_sample_boundaries.html">Predicting sample boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuroglancer_quickstart.html">Neuroglancer Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_aretomo3.html">AreTomoLive Demo using data from the CryoET Data Portal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="about.html">About CryoET Data Portal</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro_cryoet.html">Introduction to CryoET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_data.html">Data Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_workflow.html">CryoET Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_ctf.html">CryoET Image Processing Challenges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing_data.html">Contribute Data to the Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdpo.html">CryoET Data Portal Ontology (CDPO)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_faq.html">FAQ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/edit/main/docs/cryoet_data_portal_docsite_landing.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/issues/new?title=Issue%20on%20page%20%2Fcryoet_data_portal_docsite_landing.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/cryoet_data_portal_docsite_landing.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CryoET Data Portal | Documentation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> None </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amazon-web-services-s3-bucket-info">Amazon Web Services S3 Bucket Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-the-cryoet-data-portal">Citing the CryoET Data Portal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portal-citation">Portal Citation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledging-data-contributors">Acknowledging Data Contributors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-citation-metadata-via-the-api-or-graphql">Finding Citation Metadata via the API or GraphQL</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1 id="cryoet-data-portal-documentation">CryoET Data Portal | Documentation<a class="headerlink" href="#cryoet-data-portal-documentation" title="Link to this heading">#</a></h1>
+<p>The <a class="reference external" href="https://www.czimaginginstitute.org/">Chan Zuckerberg Institute for Advanced Biological Imaging (CZ Imaging Institute)</a> has made a beta release of the <a class="reference external" href="https://cryoetdataportal.czscience.com">CryoET Data Portal</a> providing queryable and organized data from CryoET experiments. Each of the nearly 20,000 tomograms on the Portal have at least one structure annotated.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 landing-grid docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-text-center"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary reference internal" href="cryoet_data_portal_docsite_data.html#data-organization"><span class="std std-ref">Learn about the Data Schema</span></a></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p class="sd-text-center"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary reference internal" href="contributing_data.html#contributing-data"><span class="std std-ref">Learn about Contributing Data</span></a></p>
+</div>
+</div>
+</div>
+<p>This site provides additional documentation for using our <a class="reference internal" href="python-api.html"><span class="doc std std-doc">Python API</span></a> to query and download data and for navigating the <a class="reference external" href="https://cryoetdataportal.czscience.com">CryoET Data Portal</a> and its visualization tools. We hope this site will assist segmentation algorithm developers to produce annotations for diverse macromolecules in the tomograms that may be used for high-resolution subtomogram averaging.</p>
+<p>We welcome feedback from the community on the data structure, design and functionality.</p>
+<ul class="simple">
+<li><p>Share first impressions, or sign up for invites to future feedback activities in <a class="reference external" href="https://airtable.com/apppmytRJXoXYTO9w/shrjmV9knAC7E7VVM?prefill_Event=P1BannerF&amp;amp;hide_Event=true">this short form</a>.</p></li>
+<li><p>Submit bugs for the CryoET Data Portal via <a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/new?assignees=&amp;amp;labels=bug&amp;amp;projects=&amp;amp;template=bug.md&amp;amp;title=">GitHub issues</a>.</p></li>
+<li><p>Start a <a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/discussions/new/choose">Github discussion</a> with questions or to request new features.</p></li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Get Started</div>
+<p class="sd-card-text">Install and start using the Python Client API</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="cryoet_data_portal_docsite_quick_start.html#quick-start"><span class="std std-ref">Quickstart</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+API Reference</div>
+<p class="sd-card-text">Information on the Python Client API Classes</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="api_reference.html#api-reference"><span class="std std-ref">API reference</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Tutorials</div>
+<p class="sd-card-text">Examples of selecting, downloading, and visualizing data from the Portal</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="tutorials.html"><span class="doc">Tutorials</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+About CryoET Data Portal</div>
+<p class="sd-card-text">Learn about CryoET data and how to find and preview it on the Portal</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="about.html"><span class="doc">About CryoET Data Portal</span></a></div>
+</div>
+</div>
+</div>
+<h2 id="amazon-web-services-s3-bucket-info">Amazon Web Services S3 Bucket Info<a class="headerlink" href="#amazon-web-services-s3-bucket-info" title="Link to this heading">#</a></h2>
+<p>The CryoET Data Portal S3 bucket supports public access. The bucket URL is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">cryoet</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">portal</span><span class="o">-</span><span class="n">public</span>
+</code></pre></div>
+</div>
+<p>To list the bucket contents with the S3 CLI without credentials, please use the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">aws</span> <span class="n">s3</span> <span class="n">ls</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">sign</span><span class="o">-</span><span class="n">request</span> <span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">cryoet</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">portal</span><span class="o">-</span><span class="n">public</span>
+</code></pre></div>
+</div>
+<p>Refer to <a class="reference internal" href="cryoet_data_portal_docsite_aws.html#download-data"><span class="std std-ref">this how-to guide</span></a> for information on downloading data from our AWS S3 bucket.</p>
+<h2 id="citing-the-cryoet-data-portal"><span id="id1"></span>Citing the CryoET Data Portal<a class="headerlink" href="#citing-the-cryoet-data-portal" title="Link to this heading">#</a></h2>
+<h3 id="portal-citation">Portal Citation<a class="headerlink" href="#portal-citation" title="Link to this heading">#</a></h3>
+<p>If you use the CryoET Data Portal in your work, please cite the following publication:</p>
+<p>Ermel, U., Cheng, A., Ni, J.X. et al. A data portal for providing standardized annotations for cryo-electron tomography. Nat Methods 21, 2200–2202 (2024). <a class="reference external" href="https://doi.org/10.1038/s41592-024-02477-2">https://doi.org/10.1038/s41592-024-02477-2</a></p>
+<h3 id="acknowledging-data-contributors">Acknowledging Data Contributors<a class="headerlink" href="#acknowledging-data-contributors" title="Link to this heading">#</a></h3>
+<p>If you use data from the Portal in your work, please acknowledge the authors and cite associated publications. Below is an example of recommended formatting:</p>
+<blockquote>
+<div><p>Some of the data used in this work was provided by Irene de Teresa Trueba et al and Mallak Ali et al. The data are available through the CryoET Data Portal (Nat Methods 21, 2200–2202 (2024). <a class="reference external" href="https://doi.org/10.1038/s41592-024-02477-2">https://doi.org/10.1038/s41592-024-02477-2</a>) with the following metadata.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Deposition ID</p></th>
+<th class="head"><p>Entity Type</p></th>
+<th class="head"><p>Entity ID(s)</p></th>
+<th class="head"><p>Primary Author(s)</p></th>
+<th class="head"><p>Associated Publication DOI(s)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10000</p></td>
+<td><p>Dataset</p></td>
+<td><p>10000, 10001</p></td>
+<td><p>Irene de Teresa Trueba</p></td>
+<td><p>10.1101/2022.04.12.488077, 10.1038/s41592-022-01746-2</p></td>
+</tr>
+<tr class="row-odd"><td><p>10312</p></td>
+<td><p>Dataset</p></td>
+<td><p>10442</p></td>
+<td><p>Mallak Ali, Ariana Peck, Yue Yu, Jonathan Schwartz</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></blockquote>
+<h3 id="finding-citation-metadata-via-the-api-or-graphql">Finding Citation Metadata via the API or GraphQL<a class="headerlink" href="#finding-citation-metadata-via-the-api-or-graphql" title="Link to this heading">#</a></h3>
+<p>You can programmatically retrieve metadata for your citations via the Python API.</p>
+<h4 id="api-example-dataset-annotation-or-tomogram">API Example - Dataset, Annotation, or Tomogram<a class="headerlink" href="#api-example-dataset-annotation-or-tomogram" title="Link to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">cryoet_data_portal</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">Dataset</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">get_by_id</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="mi">10442</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">deposition_id</span><span class="p">)</span>  <span class="c1"># Get the deposition ID</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">dataset_publications</span><span class="p">)</span>   <span class="c1"># List of DOIs of associated publications</span>
+</code></pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span class="mi">10312</span>
+<span class="kc">None</span>
+</code></pre></div>
+</div>
+<h4 id="api-example-runs">API Example - Runs<a class="headerlink" href="#api-example-runs" title="Link to this heading">#</a></h4>
+<p>For runs, access the deposition ID and publication DOIs through the parent dataset:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">cryoet_data_portal</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">Run</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+
+<span class="n">run</span> <span class="o">=</span> <span class="n">Run</span><span class="o">.</span><span class="n">get_by_id</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="mi">10005</span><span class="p">)</span> <span class="c1"># use the numeric Run ID</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">run</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">deposition_id</span><span class="p">)</span>  <span class="c1"># Get the deposition ID</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">run</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">dataset_publications</span><span class="p">)</span>   <span class="c1"># List of DOIs of associated publications</span>
+</code></pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span class="mi">10029</span>
+<span class="mf">10.1073</span><span class="o">/</span><span class="n">pnas</span><span class="mf">.1518952113</span>
+</code></pre></div>
+</div>
+<h4 id="graphql-example-dataset-annotation-or-tomogram">GraphQL Example - Dataset, Annotation or Tomogram<a class="headerlink" href="#graphql-example-dataset-annotation-or-tomogram" title="Link to this heading">#</a></h4>
+<div class="highlight-graphql notranslate"><div class="highlight"><pre><span></span><code><span class="k">query</span><span class="w"> </span><span class="nf">GetDatasetPublication</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">datasets</span><span class="p">(</span><span class="n">where</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">_eq</span><span class="p">:</span><span class="w"> </span><span class="mi">10442</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">id</span>
+<span class="w">    </span><span class="n">depositionId</span>
+<span class="w">    </span><span class="n">datasetPublications</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;datasets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10442</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;depositionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10312</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;datasetPublications&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<h4 id="graphql-example-runs">GraphQL Example - Runs<a class="headerlink" href="#graphql-example-runs" title="Link to this heading">#</a></h4>
+<p>For runs, access the deposition ID and publication DOIs through the parent dataset:</p>
+<div class="highlight-graphql notranslate"><div class="highlight"><pre><span></span><code><span class="k">query</span><span class="w"> </span><span class="nf">GetRunPublication</span><span class="p">{</span>
+<span class="w">  </span><span class="n">runs</span><span class="p">(</span><span class="n">where</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">id</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">_eq</span><span class="p">:</span><span class="w"> </span><span class="mi">10005</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">id</span>
+<span class="w">    </span><span class="n">dataset</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">depositionId</span>
+<span class="w">      </span><span class="n">datasetPublications</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;runs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10005</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;dataset&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;depositionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10029</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;datasetPublications&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;10.1073/pnas.1518952113&quot;</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CryoET Data Portal | Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cryoet_data_portal_docsite_quick_start.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Quickstart</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> None
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amazon-web-services-s3-bucket-info">Amazon Web Services S3 Bucket Info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citing-the-cryoet-data-portal">Citing the CryoET Data Portal</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portal-citation">Portal Citation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledging-data-contributors">Acknowledging Data Contributors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-citation-metadata-via-the-api-or-graphql">Finding Citation Metadata via the API or GraphQL</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Biohub and Awesome-ESM Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026 Awesome-ESM Contributors.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

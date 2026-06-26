@@ -1,0 +1,1197 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Data Organization" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dgmccart.github.io/cryoet_data_portal_docsite_data.html" />
+<meta property="og:site_name" content="Awesome-ESM Documentation" />
+<meta property="og:description" content="The Data Portal is organized in a hierarchical structure. We welcome contributions to the Portal. Use this form to express interest in adding your data to the Portal. Overview: CryoET Data Portal D..." />
+<meta property="og:image" content="https://dgmccart.github.io/_static/img/logo.svg" />
+<meta property="og:image:alt" content="Awesome-ESM Documentation" />
+<meta name="description" content="The Data Portal is organized in a hierarchical structure. We welcome contributions to the Portal. Use this form to express interest in adding your data to the Portal. Overview: CryoET Data Portal D..." />
+
+    <title>Data Organization &#8212; Awesome-ESM Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_immaterial_theme.140ae81b18dd3ac08.min.css?v=137fc61d" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cryoet_data_portal_docsite_data';</script>
+    <script src="_static/js/faq.js?v=b6be1a0a"></script>
+    <script src="_static/js/version_redirect.js?v=80bed784"></script>
+    <link rel="icon" href="_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CryoET Workflow" href="cryoet_workflow.html" />
+    <link rel="prev" title="Introduction to CryoET" href="intro_cryoet.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/biohub-logo-dark.png" class="logo__image only-light" alt="Awesome-ESM Documentation - Home"/>
+    <script>document.write(`<img src="_static/biohub-logo-light.png" class="logo__image only-dark" alt="Awesome-ESM Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_landing.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_quick_start.html">Quickstart</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="python-api.html">Python API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html">API reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="full_changelog.html">Changelog</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_aws.html">Download Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_napari.html">Using napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_sample_boundaries.html">Predicting sample boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuroglancer_quickstart.html">Neuroglancer Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_aretomo3.html">AreTomoLive Demo using data from the CryoET Data Portal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="about.html">About CryoET Data Portal</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro_cryoet.html">Introduction to CryoET</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Data Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_workflow.html">CryoET Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_ctf.html">CryoET Image Processing Challenges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing_data.html">Contribute Data to the Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdpo.html">CryoET Data Portal Ontology (CDPO)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_faq.html">FAQ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/edit/main/docs/cryoet_data_portal_docsite_data.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/issues/new?title=Issue%20on%20page%20%2Fcryoet_data_portal_docsite_data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/cryoet_data_portal_docsite_data.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Organization</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> None </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#depositions">Depositions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runs">Runs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tilt-series">Tilt Series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tomograms">Tomograms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotations">Annotations</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1 id="data-organization"><span id="id1"></span>Data Organization<a class="headerlink" href="#data-organization" title="Link to this heading">#</a></h1>
+<p>The Data Portal is organized in a hierarchical structure. We welcome contributions to the Portal. <a class="reference external" href="https://airtable.com/apppmytRJXoXYTO9w/shr5UxgeQcUTSGyiY?prefill_Event=Portal&amp;amp;hide_Event=true">Use this form</a> to express interest in adding your data to the Portal.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<figure class="align-center" id="id3">
+<img alt="CryoET Data Portal Data Schema" src="figures/data_schema.png" />
+<figcaption>
+<p><span class="caption-text"><span class="caption-text">
+CryoET Data Portal Data Hierarchy</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></figcaption>
+</figure>
+<p>As shown in the diagram above, the CryoET Data Portal has 3 levels in the data hierarchy:</p>
+<ul class="simple">
+<li><p><strong>Dataset</strong> is a set of image files for tilt series, reconstructed tomograms, and cellular and/or subcellular annotation files. Every dataset contains only one sample type prepared with the same conditions. The dataset title, such as “S. pombe cryo-FIB lamellae acquired with defocus-only,” summarizes these conditions. Samples can be a cell, tissue or organism; intact organelle; in-vitro mixture of macromolecules or their complex; or in-silico synthetic data, where the experimental conditions are kept constant. Datasets typically contain multiple runs (see below). Downloading a dataset downloads all files, including all available tilt series, tomograms, and annotations.</p></li>
+<li><p><strong>Run</strong> is one experiment, or replicate, within a dataset, where all runs in a dataset have the same sample conditions. Every run contains a collection of all tomography data and annotations related to imaging one physical location in a sample, and within one dataset, runs may correspond to individual locations within a single sample. Each run typically contains one tilt series and all associated data (e.g. movie frames, tilt series image stack, tomograms, annotations, and metadata), but in some cases, it may be a set of tilt series that form a mosaic. Runs contain at least one annotation for every tomogram. When downloading a run from a Portal page, you may choose to download the tomogram or all available annotations. To download all data associated with a run (i.e. all available movie frames, tilt series image stack, tomograms, annotations, and associated metadata), <a class="reference internal" href="#run-download-options">use the API</a>.</p></li>
+<li><p><strong>Annotation</strong> is a point or segmentation indicating the location of a macromolecular complex in the tomogram. On a run overview page, you may choose to download individual annotations.</p></li>
+</ul>
+<p>All data is added to the Portal through Depositions, which is described below, and a subset of depositions are displayed in the depositions tab on “Browse Data” page of the Portal.</p>
+<p>For more detailed explanations of all data types in the Portal refer to the sections below.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#depositions">Depositions</a></p></li>
+<li><p><a class="reference internal" href="#datasets">Datasets</a></p></li>
+<li><p><a class="reference internal" href="#runs">Runs</a></p></li>
+<li><p><a class="reference internal" href="#tilt-series">Tilt Series</a></p></li>
+<li><p><a class="reference internal" href="#tomograms">Tomograms</a></p></li>
+<li><p><a class="reference internal" href="#annotations">Annotations</a></p></li>
+</ol>
+<h2 id="depositions">Depositions<a class="headerlink" href="#depositions" title="Link to this heading">#</a></h2>
+<figure class="align-center" id="id4">
+<img alt="Depositions defined" src="figures/depositions.png" />
+<figcaption>
+<p><span class="caption-text"><span class="caption-text">
+Types of depositions</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></figcaption>
+</figure>
+<p>Depositions are collections of data submitted together. All data being submitted together will be tagged with the same deposition ID, starting with CZCDP (e.g. CZCDP-12345; note that only the numeric part is supported in the API). On the Portal, we will surface depositions that contain annotations submitted together. In the future, depositions surfaced on the Portal may include tomograms added to existing datasets or sets of datasets contributed together.</p>
+<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Link to this heading">#</a></h2>
+<p>Datasets are contributed sets of image files associated with imaging one sample type with the same sample preparation methods. Datasets contain runs, where each run corresponds to imaging one physical location in the prepared samples. Dataset IDs start with DS (e.g. DS-10000; note that only the numeric part is supported in the API).</p>
+<p>The Browse Datasets page shows a table of all datasets on the Portal. These datasets are not currently ordered. Instead, the left side filter panel provides options for filtering the table according to files included in the datasets, such as ground truth annotation files; the author or ID of the dataset; organism in the sample; hardware; metadata for the tilt series or reconstructed tomograms. In addition, the search bar filters based on keywords or phrases contained in the dataset titles. The dataset entries in the table have descriptive names, such as “S. pombe cryo-FIB lamellae acquired with defocus-only,” which aim to summarize the experiment as well as a Dataset ID assigned by the Portal, the organism name, number of runs in the dataset, and list of annotated objects, such as membrane. Datasets on the Portal may be found in other image databases. On the Browse Datasets page, the datasets table shows the EMPIAR ID for datasets that are also found on the Electron Microscopy Public Image Archive.</p>
+<p>On a given Dataset Overview page, the View All Info panel contains metadata for the dataset. These metadata are defined in the tables below including their mapping to attributes in the Portal API:</p>
+<p><strong>Dataset Metadata</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Deposition Date</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.deposition_date</span></code></p></td>
+<td><p>Date when a dataset is initially received by the Data Portal.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grant ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DatasetFunding.grant_id</span></code></p></td>
+<td><p>Grant identifier provided by the funding agency.</p></td>
+</tr>
+<tr class="row-even"><td><p>Funding Agency</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">DatasetFunding.funding_agency_name</span></code></p></td>
+<td><p>Name of the funding agency.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Related Databases</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.related_database_entries</span></code></p></td>
+<td><p>The dataset identifier for other databases, e.g. EMPIAR, that contain this dataset.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Sample and Experiment Conditions</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sample Type</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.sample_type</span></code></p></td>
+<td><p>Type of sample: cell, tissue, organism, intact organelle, in-vitro mixture, in-silico synthetic data, other.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Organism Name</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.organism_name</span></code></p></td>
+<td><p>Name of the organism from which the biological sample is derived from, e.g. homo sapiens.</p></td>
+</tr>
+<tr class="row-even"><td><p>Tissue Name</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.tissue_name</span></code></p></td>
+<td><p>Name of the tissue from which a biological sample used in a CryoET study is derived from.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cell Name</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.cell_name</span></code></p></td>
+<td><p>Name of the cell from which a biological sample used in a CryoET study is derived from, e.g. sperm.</p></td>
+</tr>
+<tr class="row-even"><td><p>Cell Line or Strain Name</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.cell_strain_name</span></code></p></td>
+<td><p>Cell line or strain for the sample e.g. C57BI</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cellular Component</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.cell_component_name</span></code></p></td>
+<td><p>Name of the cellular component, e.g. sperm flagellum</p></td>
+</tr>
+<tr class="row-even"><td><p>Sample Preparation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.sample_preparation</span></code></p></td>
+<td><p>Description of how the sample was prepared.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grid Preparation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.grid_preparation</span></code></p></td>
+<td><p>Description of how the CryoET grid was prepared.</p></td>
+</tr>
+<tr class="row-even"><td><p>Other Setup</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Dataset.other_setup</span></code></p></td>
+<td><p>Description of other setup not covered by sample preparation or grid preparation that may make this dataset unique in the same publication.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Tilt Series</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Acceleration Voltage</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.acceleration_voltage</span></code></p></td>
+<td><p>Electron Microscope Accelerator voltage in volts.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spherical Aberration Constant</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.spherical_aberration_constant</span></code></p></td>
+<td><p>Spherical Aberration Constant of the objective lens in millimeters.</p></td>
+</tr>
+<tr class="row-even"><td><p>Microscope Manufacturer</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_manufacturer</span></code></p></td>
+<td><p>Name of the microscope manufacturer.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Microscope Model</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_model</span></code></p></td>
+<td><p>Microscope model name.</p></td>
+</tr>
+<tr class="row-even"><td><p>Energy Filter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_energy_filter</span></code></p></td>
+<td><p>Energy filter setup used.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Phase Plate</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_phase_plate</span></code></p></td>
+<td><p>Phase plate configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p>Image Corrector</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_image_corrector</span></code></p></td>
+<td><p>Image corrector setup.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Additional microscope optical setup</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_additional_info</span></code></p></td>
+<td><p>Other microscope optical setup information, in addition to energy filter, phase plate and image corrector.</p></td>
+</tr>
+<tr class="row-even"><td><p>Camera Manufacturer</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.camera_manufacturer</span></code></p></td>
+<td><p>Name of the camera manufacturer.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Camera Model</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.camera_model</span></code></p></td>
+<td><p>Camera model name.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="dataset-overview-page">Dataset Overview Page<a class="headerlink" href="#dataset-overview-page" title="Link to this heading">#</a></h3>
+<p>The table on a Dataset Overview page contains an overview of the runs in the dataset. Each run has a name defined by the dataset authors as well as a Run ID, which is assigned by the Portal and is subject to change in the rare case where the run data needs to be re-ingested to the Portal. In addition to the run name, the <a class="reference internal" href="#tilt-series-quality">tilt series quality</a> and list of annotated objects is detailed for each run. Each entry has a <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tomogram</span></code> button which will display the tomogram using an instance of Neuroglancer in the browser. The tomogram is visualized along with annotations that are manually chosen to display as many annotations as possible without overlap or occlusion.</p>
+<h3 id="dataset-download-options">Dataset Download Options<a class="headerlink" href="#dataset-download-options" title="Link to this heading">#</a></h3>
+<figure class="align-center" id="id5">
+<img alt="File Structure of a downloaded dataset" src="figures/dataset_download.png" />
+<figcaption>
+<p><span class="caption-text"><span class="caption-text">
+File Structure of a downloaded dataset</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></figcaption>
+</figure>
+<p>The <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Dataset</span></code> button opens a dialog with instructions for downloading the dataset using <a class="reference internal" href="cryoet_data_portal_docsite_aws.html"><span class="doc std std-doc">Amazon Web Services Command Line Interface</span></a> or the <a class="reference internal" href="python-api.html"><span class="doc std std-doc">Portal API</span></a>. Datasets are downloaded as folders named the Dataset ID. As shown in the diagram above, the folder contains subfolders for each run named the author-chosen run name, a folder named Images which contains the key photos of the dataset displayed on the Portal, and a JSON file named <code class="docutils literal notranslate"><span class="pre">dataset_metadata.json</span></code> containing the dataset metadata. The run folders contain subfolders named Tomogram and TiltSeries, containing the tomogram and tilt series image files, and a JSON file named <code class="docutils literal notranslate"><span class="pre">run_metadata.json</span></code> containing the run metadata. More details on the run folder file structure is found in the documentation <a class="reference internal" href="#run-download-options">below</a>.</p>
+<p>The metadata schema of any JSON file stored with the data on the data portal’s S3 bucket is described in LinkML and can be found <a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal-backend/tree/main/schema">here</a>.</p>
+<h2 id="runs">Runs<a class="headerlink" href="#runs" title="Link to this heading">#</a></h2>
+<p>A tomography run is a collection of all data and annotations related to one physical location in a sample and is associated with a dataset that typically contains many other runs. On the Data Portal pages, runs are directly linked to their tomograms. For a single run, multiple tomograms of different spacings can be available. Run IDs start with RN (e.g. RN-427; note that only the numeric part is supported in the API).</p>
+<p>An overview of all runs in a dataset is presented in the Dataset Overview page. Each run has its own Run Overview Page, where the View All Info panel contains metadata for the run. These metadata are defined in the tables below including their mapping to attributes in the Portal API:</p>
+<p><strong>Tilt Series</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Tilt Series ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.id</span></code></p></td>
+<td><p>Numeric identifier.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Microscope Manufacturer</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_manufacturer</span></code></p></td>
+<td><p>Name of the microscope manufacturer.</p></td>
+</tr>
+<tr class="row-even"><td><p>Microscope Model</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_model</span></code></p></td>
+<td><p>Microscope model name.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Phase Plate</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_phase_plate</span></code></p></td>
+<td><p>Phase plate configuration.</p></td>
+</tr>
+<tr class="row-even"><td><p>Image Corrector</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_image_corrector</span></code></p></td>
+<td><p>Image corrector setup.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Additional microscope optical setup</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_additional_info</span></code></p></td>
+<td><p>Other microscope optical setup information, in addition to energy filter, phase plate and image corrector.</p></td>
+</tr>
+<tr class="row-even"><td><p>Acceleration Voltage</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.acceleration_voltage</span></code></p></td>
+<td><p>Electron Microscope Accelerator voltage in volts.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Spherical Aberration Constant</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.spherical_aberration_constant</span></code></p></td>
+<td><p>Spherical Aberration Constant of the objective lens in millimeters.</p></td>
+</tr>
+<tr class="row-even"><td><p>Camera Manufacturer</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.camera_manufacturer</span></code></p></td>
+<td><p>Name of the camera manufacturer.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Camera Model</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.camera_model</span></code></p></td>
+<td><p>Camera model name.</p></td>
+</tr>
+<tr class="row-even"><td><p>Energy Filter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.microscope_energy_filter</span></code></p></td>
+<td><p>Energy filter setup used.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Acquisition Software</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.data_acquisition_software</span></code></p></td>
+<td><p>Software used to collect data.</p></td>
+</tr>
+<tr class="row-even"><td><p>Pixel Spacing</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.pixel_spacing</span></code></p></td>
+<td><p>Pixel spacing for the tilt series.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tilt Axis</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.tilt_axis</span></code></p></td>
+<td><p>Rotation angle in degrees.</p></td>
+</tr>
+<tr class="row-even"><td><p>Tilt Range</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.tilt_range</span></code></p></td>
+<td><p>Total tilt range in degrees.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tilt Step</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.tilt_step</span></code></p></td>
+<td><p>Tilt step in degrees.</p></td>
+</tr>
+<tr class="row-even"><td><p>Tilting Scheme</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.tilting_scheme</span></code></p></td>
+<td><p>The order of stage tilting during acquisition of the data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total Flux</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.total_flux</span></code></p></td>
+<td><p>Number of electrons reaching the specimen in a square Angstrom area for the entire tilt series.</p></td>
+</tr>
+<tr class="row-even"><td><p>Binning from Frames</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.binning_from_frames</span></code></p></td>
+<td><p>Describes the binning factor from frames to tilt series file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Series is Aligned</p></td>
+<td><p>–</p></td>
+<td><p>True or false, indicating whether the tilt series images have been transformed to account for the tomographic alignment.</p></td>
+</tr>
+<tr class="row-even"><td><p>Related EMPIAR Entry</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">TiltSeries.related_empiar_entry</span></code></p></td>
+<td><p>EMPIAR dataset identifier If a tilt series is deposited into EMPIAR.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Tomograms Summary</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Total Tomograms</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">len(Run.tomograms)</span></code></p></td>
+<td><p>Number of tomograms in this run.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Samplings Available</p></td>
+<td><p>see <a class="reference internal" href="cryoet_data_portal_docsite_examples.html#all-voxel-spacings-example"><span class="std std-ref">how to get all voxel spacings available for this run</span></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Tomogram Processing</p></td>
+<td><p>see <a class="reference internal" href="cryoet_data_portal_docsite_examples.html#all-tomogram-processing-example"><span class="std std-ref">how to get all types of post-processing methods for tomograms in this run</span></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Annotated Objects</p></td>
+<td><p>see <a class="reference internal" href="cryoet_data_portal_docsite_examples.html#all-annotated-object-example"><span class="std std-ref">how to get all annotated object names for this run</span></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="run-overview-page">Run Overview Page<a class="headerlink" href="#run-overview-page" title="Link to this heading">#</a></h3>
+<p>The summary on the Run Overview page shows a subset of the run metadata as well as the number and type of files in the run and the <a class="reference internal" href="#tilt-series-quality">tilt series quality score</a>. The <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tomogram</span></code> button opens the associated tomogram along with annotations using an instance of Neuroglancer in the browser. The annotations displayed with the tomogram are manually chosen to display as many annotations as possible without overlap or occlusion.</p>
+<p>The table on a Run Overview page contains an overview of the annotations for the tomograms in this run. Each annotation has an Annotation ID, which is assigned by the Portal and is subject to change in the rare case where the annotation data needs to be re-ingested in the Portal. In addition to the Annotation ID, the table shows the object annotated, the type of the annotation, such as segmentation or point, the method used for annotation, such as manual or automated, and metrics for assessing the annotation.</p>
+<h3 id="run-download-options">Run Download Options<a class="headerlink" href="#run-download-options" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">...</span></code> button on the Run Overview page opens a dialog for downloading tomograms or instructions for downloading all annotations or all run data. Individual tomograms can be downloaded directly in the browser as MRC or OME-Zarr files following selection of which tomogram to download based on the tomogram sampling and processing. The All Annotations option provides instructions on using <a class="reference internal" href="cryoet_data_portal_docsite_aws.html"><span class="doc std std-doc">Amazon Web Services Command Line Interface</span></a> or the <a class="reference internal" href="python-api.html"><span class="doc std std-doc">Portal API</span></a> to download.</p>
+<p>You can also use the Portal API to download all run data as a folder using the Run ID in the download dialog or in the header on the Run Overview page. For example, to download all run data for Run ID 645 into your current working directory, use the below code snippet:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">cryoet_data_portal</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">Run</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">()</span>
+
+<span class="n">run</span> <span class="o">=</span> <span class="n">Run</span><span class="o">.</span><span class="n">get_by_id</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="mi">645</span><span class="p">)</span>
+<span class="n">run</span><span class="o">.</span><span class="n">download_everything</span><span class="p">()</span>
+</code></pre></div>
+</div>
+<figure>
+  <img src="_static/img/run_download.png"
+    alt="File Structure of a downloaded run"
+  >
+  <figcaption>File Structure of a downloaded run
+  </figcaption>
+</figure>
+<p>Runs are downloaded as folders named the author-chosen run name. As shown in the diagram above, the folder contains subfolders named Alignments, Frames, Gains, Reconstructions, and TiltSeries; and a JSON file named <code class="docutils literal notranslate"><span class="pre">run_metadata.json</span></code> containing the run metadata. The Alignments folder contains a JSON file for every alignment that specifies the alignment parameters including the affine transformation matrix. The Frames and Gains folders contain the raw movie frames and the gain files for correcting for the detector’s sensitivity, respectively. The TiltSeries folder contains the tilt series images as an MRC file and OME-Zarr directory as well as a JSON file with the tilt series metadata. The Reconstructions folder has a subfolder for every voxel spacing available, and each of those folders contains subfolders NeuorglancerPrecompute, which has files for visualizing the data in Neuroglancer; Images, which contains the key photos of the run displayed on the Portal; Tomograms, which has the tomograms associated with the run as an MRC file and OME-Zarr directory along with tomogram metadata and metadata for visualizing the tomogram with Neuroglancer; and Annotations. More details on the Annotation folder file structure is found in the documentation <a class="reference internal" href="#annotation-download-options">below</a>.</p>
+<h2 id="tilt-series">Tilt Series<a class="headerlink" href="#tilt-series" title="Link to this heading">#</a></h2>
+<p>Please refer to our educational article about <a class="reference internal" href="cryoet_workflow.html#data-collection"><span class="std std-ref">CryoET Data Collection</span></a> for a detailed description of tilt series. Each tilt series has a Tilt Series ID, which is assigned by the Portal and is subject to change in the rare case where the tilt series data needs to be re-ingested in the Portal. Tilt Series IDs start with TS (e.g. TS-12345; note that only the numeric part is supported in the API).</p>
+<h3 id="frames">Frames<a class="headerlink" href="#frames" title="Link to this heading">#</a></h3>
+<p>When acquiring tilted projections of a sample as part of a CryoET tilt series acquisition, one actually acquires a movie at each tilt (stored as so-called “movie stacks” or “frame stacks”) so that beam induced motion can be corrected after acquisition by compensating translations and warping. Upon correction, these frames are summed to form a single image at each tilt angle, and the collection of images is referred to as the tilt series. Usually, each run of a CryoET dataset will have 30-50 frame stacks of 5-100 frames associated with it, where the number of stacks is the same as the number of tilts during acquisition. Acquisition metadata are stored in MDOC-files, which are text-based with one section per frame stack.</p>
+<p>When available, the <code class="docutils literal notranslate"><span class="pre">Frames</span></code> folder in a downloaded run contains the raw frame images, acquisition metadata MDOC file, and an additional metadata file in JSON format.</p>
+<h3 id="gains">Gains<a class="headerlink" href="#gains" title="Link to this heading">#</a></h3>
+<p>Individual pixels or whole sectors of the direct electron detector used in <a class="reference internal" href="intro_cryoet.html#electron"><span class="std std-ref">CryoET Data Acquisition</span></a> can have different responses to the same incident signal. In order to control for this uneven detector response, an image is acquired without any sample in the beam path. This flat-field image, called a “gain reference”, allows correction of the recorded signal in the images acquired of a real sample. A single gain reference can be applicable to multiple runs of a cryoET dataset.</p>
+<p>When available, the <code class="docutils literal notranslate"><span class="pre">Gains</span></code> folder in a downloaded run contains the gain reference image.</p>
+<h3 id="tilt-series-assembly">Tilt Series Assembly<a class="headerlink" href="#tilt-series-assembly" title="Link to this heading">#</a></h3>
+<p>The raw frame stacks from image acquisition are motion corrected and averaged at each tilt angle to form the tilt series. Please refer to our educational article about <a class="reference internal" href="cryoet_workflow.html#data-collection"><span class="std std-ref">CryoET Data Collection</span></a> for a detailed description of tilt series assembly from the raw frame stacks.</p>
+<p>When available, the <code class="docutils literal notranslate"><span class="pre">TiltSeries</span></code> folder in a downloaded run contains the tilt series images in MRC and OME-Zarr file format, tilt series metadata JSON file, and the rawtlt file. The rawtlt file contains a list of the tilt angles from image acquisition and is used by downstream programs for alignment and tomogram reconstruction.</p>
+<h3 id="tilt-series-quality"><span id="id2"></span>Tilt Series Quality<a class="headerlink" href="#tilt-series-quality" title="Link to this heading">#</a></h3>
+<p>The tilt series quality score is found on Dataset Overview pages in the run table and on Run Overview pages in the header. This score is assigned by the dataset authors to communicate their quality estimate to users. This score is only applicable for comparing tilt series within a dataset on a relative subjective scale. Score ranges 1-5, with 5 being best. Below is an example scale based mainly on alignability and usefulness for the intended analysis.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Rating</p></th>
+<th class="head text-center"><p>Quality</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>5</p></td>
+<td class="text-center"><p>Excellent</p></td>
+<td class="text-left"><p>Full Tilt Series/Reconstructions could be used in publication ready figures.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>4</p></td>
+<td class="text-center"><p>Good</p></td>
+<td class="text-left"><p>Full Tilt Series/Reconstructions are useful for analysis (subtomogram averaging, segmentation).</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>3</p></td>
+<td class="text-center"><p>Medium</p></td>
+<td class="text-left"><p>Minor parts of the tilt series (projection images) need to be or have been discarded prior to reconstruction and analysis.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>2</p></td>
+<td class="text-center"><p>Marginal</p></td>
+<td class="text-left"><p>Major parts of the tilt series (projection images) need to be or have been discarded prior to reconstruction and analysis. Useful for analysis only after heavy manual intervention.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>1</p></td>
+<td class="text-center"><p>Low</p></td>
+<td class="text-left"><p>Not useful for analysis with current tools (not alignable), useful as a test case for problematic data only.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="tomograms">Tomograms<a class="headerlink" href="#tomograms" title="Link to this heading">#</a></h2>
+<p>Please refer to our educational article about <a class="reference internal" href="cryoet_workflow.html#image-preprocessing"><span class="std std-ref">CryoET Data Processing</span></a> for a high level description of how tomograms are reconstructed from tilt series. Part of the tomogram reconstruction process, involves aligning the tilt series and correcting it using an estimated contrast transfer function (CTF). A detailed article on this process is coming soon. On the Portal, alignnment metadata JSON files are available for every tomogram, and these files contain the affine transformation matrix along with information such as the alignment type (e.g. local vs global).</p>
+<p>Tomograms are summarized in a table on Run Overview pages. Note that by default the Annotations table is displayed on the Run Overview pages, but you can toggle to the Tomograms table by clicking the tab above the table. Each tomogram has a Tomogram ID, which is assigned by the Portal and is subject to change in the rare case where the tomogram data needs to be re-ingested in the Portal. Tomogram IDs start with TM (e.g. TM-6091; note that only the numeric part is supported in the API).</p>
+<p>The Tomogram table has columns with the author-chosen Tomogram Name (including the Tomogram ID and a truncated list of authors), Deposition Date, Alignment ID (ID of the alignment file used to align the tilt series for tomogram reconstruction), Voxel Spacing (containing both the voxel spacing in angstroms and the size of the tomogram in pixels), Reconstruction Method (e.g. WBP for weighted back projection), and Post-Processing information (e.g. denoised, filtered, etc.).</p>
+<p>When available, each tomogram in the table has its own <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tomogram</span></code> button which will open Neuroglancer in a new tab with the tomogram along with all its available annotations preloaded. Check out our <a class="reference internal" href="neuroglancer_quickstart.html"><span class="doc std std-doc">Neuroglancer Quickstart</span></a> to learn more about navigating Neuroglancer.</p>
+<p>Each tomogram entry in the table also has a <code class="docutils literal notranslate"><span class="pre">Download</span></code> button which opens a dialog containing direct download and code snippets for other download methods.</p>
+<p>Each tomogram has its own metadata, which can be viewed using the info icon on the entry in the tomograms table. These metadata are defined in the tables below including their mapping to attributes in the Portal API:</p>
+<p><strong>Tomogram Overview</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Authors</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.authors</span></code></p></td>
+<td><p>The tomogram authors of this tomogram.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Publications</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.publications</span></code></p></td>
+<td><p>Comma-separated list of DOIs for publications associated with the tomogram.</p></td>
+</tr>
+<tr class="row-even"><td><p>Related Databases</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.related_database_entries</span></code></p></td>
+<td><p>Comma-separated list of other database identifiers (e.g. EMPIAR-11445) if the tomogram is also deposited into other databases.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Deposition Name</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.deposition</span></code></p></td>
+<td><p>The name of the deposition this tomogram is a part of.</p></td>
+</tr>
+<tr class="row-even"><td><p>Deposition ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.deposition_id</span></code></p></td>
+<td><p>The ID of the deposition this tomogram is a part of.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Deposition Date</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.deposition_date</span></code></p></td>
+<td><p>Date when a tomogram is initially received by the Data Portal.</p></td>
+</tr>
+<tr class="row-even"><td><p>Release Date</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.release_date</span></code></p></td>
+<td><p>Date when a tomogram is made public by the Data Portal.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Last Modified Date</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.last_modified_date</span></code></p></td>
+<td><p>Date when a tomogram was last modified in the Data Portal.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Reconstruction and Processing</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Is Portal Standard</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.is_portal_standard</span></code></p></td>
+<td><p>Whether this tomogram is a standardized reconstruction of the original tomogram, following a consistent format and coordinate space, and completed by CZII.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Submitted by Dataset Author</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.is_author_submitted</span></code></p></td>
+<td><p>Whether this tomogram was submitted by the author of the dataset it belongs to.</p></td>
+</tr>
+<tr class="row-even"><td><p>Reconstruction Software</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.reconstruction_software</span></code></p></td>
+<td><p>Name of software used for reconstruction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Reconstruction Method</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.reconstruction_method</span></code></p></td>
+<td><p>Describe reconstruction method (WBP, SART, SIRT).</p></td>
+</tr>
+<tr class="row-even"><td><p>Processing Software</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.processing_software</span></code></p></td>
+<td><p>Processing software used to derive the tomogram.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Processing</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.processing</span></code></p></td>
+<td><p>Describe additional processing used to derive the tomogram</p></td>
+</tr>
+<tr class="row-even"><td><p>Voxel Spacing</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.voxel_spacing</span></code></p></td>
+<td><p>Voxel spacing equal in all three axes in angstroms</p></td>
+</tr>
+<tr class="row-odd"><td><p>Size (x,y,z)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(Tomogram.size_x,</span> <span class="pre">Tomogram.size_y,</span> <span class="pre">Tomogram.size_z)</span></code> or <code class="docutils literal notranslate"><span class="pre">Tomogram.scale0_dimensions</span></code></p></td>
+<td><p>Comma separated x,y,z dimensions of the unscaled tomogram in pixels.</p></td>
+</tr>
+<tr class="row-even"><td><p>Fiducial Alignment Status</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.fiducial_alignment_status</span></code></p></td>
+<td><p>Fiducial Alignment status: True = aligned with fiducial False = aligned without fiducial.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ctf Corrected</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.ctf_corrected</span></code></p></td>
+<td><p>Whether this tomogram is CTF corrected</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Alignment</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Alignment ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.alignment_id</span></code></p></td>
+<td><p>The ID of the alignment used to generate this tomogram.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Is Portal Standard.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Tomogram.is_portal_standard</span></code></p></td>
+<td><p>Whether or not the tomogram is considered canonical, meaning as minimal processing as possible.</p></td>
+</tr>
+<tr class="row-even"><td><p>Alignment Type</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Alignment.alignment_type</span></code></p></td>
+<td><p>Method of alignment used to generate the tomogram (e.g. local, global, fiducial-based, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dimension (x,y,z)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(Alignment.volume_x_dimension,</span> <span class="pre">Alignment.volume_y_dimension,</span> <span class="pre">Alignment.volume_z_dimension)</span></code></p></td>
+<td><p>Comma separated x,y,z dimensions of the unscaled tomogram in angstroms.</p></td>
+</tr>
+<tr class="row-even"><td><p>Offset (x,y,z)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(Tomogram.offset_x,</span> <span class="pre">Tomogram.offset_y,</span> <span class="pre">Tomogram.offset_z)</span></code></p></td>
+<td><p>Comma separated x,y,z offsets of the data relative to the canonical tomogram in pixels.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rotation (x)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Alignment.x_rotation_offset</span></code></p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-even"><td><p>Tilt Offset</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Alignment.tilt_offset</span></code></p></td>
+<td><p>–</p></td>
+</tr>
+<tr class="row-odd"><td><p>Affine Transformation Matrix</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Alignment.affine_transformation_matrix</span></code></p></td>
+<td><p>–</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="tomogram-download-options">Tomogram Download Options<a class="headerlink" href="#tomogram-download-options" title="Link to this heading">#</a></h3>
+<p>Individual entries in the Tomograms table can be downloaded using the <code class="docutils literal notranslate"><span class="pre">Download</span></code> button on the right side of each entry in the table. This button opens a dialog with tomogram selection in a drop down by name (whichever tomogram entry was chosen will be loaded by default) along with a dropdown to chose between MRC and OME-Zarr file format. On the next page of the dialog, the tomogram can be downloaded directly or if desired, code snippets and instructions are available in separate tabs for downloading the tomogram via cURL, <a class="reference internal" href="cryoet_data_portal_docsite_aws.html"><span class="doc std std-doc">AWS CLI</span></a>, or the <a class="reference internal" href="api_reference.html#api-reference"><span class="std std-ref">Portal API</span></a>.</p>
+<h2 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Link to this heading">#</a></h2>
+<p>Annotations are summarized in a table on Run Overview pages. Each annotation has an Annotation ID, which is assigned by the Portal and is subject to change in the rare case where the annotation data needs to be re-ingested in the Portal. Annotation IDs start with AN (e.g. AN-2480; note that only the numeric part is supported in the API). Each annotation labels exactly one type of object, such as ribosome or membrane, indicated by the Object Type column of the table. For every object, there is one type of annotation per entry in the table indicated in the Object Shape Type column. The options are Segmentation for semantic segmentation masks, Instance Segmentation for segmentation masks where each individual object is labeled with its own color, Point for point annotations, and Oriented Point for point annotations that have an associated rotation matrix. The method used for generating the annotation is displayed for each annotation with manual meaning the annotations were created by hand, automated meaning automated tools or algorithms without supervision were used, and hybrid meaning the annotations were generated using a combination of automated and manual methods.</p>
+<p>Annotations also have an optional precision field, which is the percentage of true positives among the total number of positive predictions where a value of 100% means everything found is actually the object of interest, and a recall field, which is the percentage of true positives among the actual number of objects where a value of 100% meaning all objects of interest were found. The Precision and Recall fields can only be calculated by comparing with a ground truth annotation, so for many annotations on the Portal, this field is marked NA for not available.</p>
+<h3 id="ground-truth-flag">Ground Truth Flag<a class="headerlink" href="#ground-truth-flag" title="Link to this heading">#</a></h3>
+<p>Authors may also utilize the Ground Truth flag on entries in the annotation table. The Ground Truth flag indicates that this annotation is endorsed by the author for use as training or validation data for machine learning models.</p>
+<p>Each annotation has its own metadata, which can be viewed using the info icon on the entry in the annotations table. These metadata are defined in the tables below including their mapping to attributes in the Portal API:</p>
+<p><strong>Annotation Overview</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Annotation ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.id</span></code></p></td>
+<td><p>Numeric identifier assigned by the Portal.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Annotation Authors</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.authors</span></code></p></td>
+<td><p>Authors of this annotation.</p></td>
+</tr>
+<tr class="row-even"><td><p>Publication</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.annotation_publication</span></code></p></td>
+<td><p>DOIs for publications that describe the dataset.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Deposition Name</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.deposition.name</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Deposition ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.deposition_id</span></code></p></td>
+<td><p>The ID of the deposition this annotation is a part of.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Deposition Date</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.deposition_date</span></code></p></td>
+<td><p>Date when an annotation set is initially received by the Data Portal.</p></td>
+</tr>
+<tr class="row-even"><td><p>Release Date</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.release_date</span></code></p></td>
+<td><p>Date when annotation data is made public by the Data Portal.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Last Modified Date</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.last_modified_date</span></code></p></td>
+<td><p>Date when an annotation was last modified in the Data Portal.</p></td>
+</tr>
+<tr class="row-even"><td><p>Alignment ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.annotation_shapes[X].annotation_files[Y].alignment_id</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Method Type</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.method_type</span></code></p></td>
+<td><p>The method type for generating the annotation (e.g., manual, hybrid, automated).</p></td>
+</tr>
+<tr class="row-even"><td><p>Annotation Method</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.annotation_method</span></code></p></td>
+<td><p>Describes how the annotation is made, e.g., Manual, crYoLO, Positive Unlabeled Learning, template matching.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Annotation Software</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.annotation_software</span></code></p></td>
+<td><p>Software used for generating this annotation.</p></td>
+</tr>
+<tr class="row-even"><td><p>Method Links</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.method_links</span></code></p></td>
+<td><p>Returns <code class="docutils literal notranslate"><span class="pre">list[AnnotationMethodLink]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Annotation Object</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Object Name</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.object_name</span></code></p></td>
+<td><p>Name of the object being annotated, e.g., ribosome, nuclear pore complex, actin filament, membrane.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Object ID</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.object_id</span></code></p></td>
+<td><p>Gene Ontology Cellular Component identifier or UniProtKB accession for the annotation object.</p></td>
+</tr>
+<tr class="row-even"><td><p>Object Count</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.object_count</span></code></p></td>
+<td><p>Number of objects identified.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Object Shape Type</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AnnotationShape.shape_type</span></code></p></td>
+<td><p>Description of whether this is a Point, OrientedPoint, or SegmentationMask file.</p></td>
+</tr>
+<tr class="row-even"><td><p>Object State</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.object_state</span></code></p></td>
+<td><p>Additional information about the annotated object not captured by the gene ontology (e.g., open or closed state for molecules).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Object Description</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.object_description</span></code></p></td>
+<td><p>Description of the annotated object, including additional information not covered by the Annotation object name and state.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Annotation Confidence</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Portal Metadata</strong></p></th>
+<th class="head"><p><strong>API Expression</strong></p></th>
+<th class="head"><p><strong>Definition</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ground Truth Status</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.ground_truth_status</span></code></p></td>
+<td><p>Whether an annotation is considered ground truth, as determined by the annotation author.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ground Truth Used</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.ground_truth_used</span></code></p></td>
+<td><p>Annotation filename used as ground truth for precision and recall.</p></td>
+</tr>
+<tr class="row-even"><td><p>Precision</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.confidence_precision</span></code></p></td>
+<td><p>Percentage of annotation objects being true positive.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Recall</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Annotation.confidence_recall</span></code></p></td>
+<td><p>Percentage of true positives being annotated correctly.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="visualizing-annotations-with-tomograms-in-neuroglancer">Visualizing Annotations with Tomograms in Neuroglancer<a class="headerlink" href="#visualizing-annotations-with-tomograms-in-neuroglancer" title="Link to this heading">#</a></h3>
+<p>On the upper right hand side of Run Overview pages, the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tomogram</span></code> button opens Neuroglancer in a new tab with the “default” tomogram along with all its available annotations preloaded. The tooltip on the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tomogram</span></code> button specifies the ID of the “default” tomogram. By navigating to the Tomogram table using the tab above the Annotations table, you may also click the <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Tomogram</span></code> button for a specific tomogram entry to open it in Neuroglancer with applicable annotations preloaded. Check out our <a class="reference internal" href="neuroglancer_quickstart.html"><span class="doc std std-doc">Neuroglancer Quickstart</span></a> to learn more about navigating Neuroglancer.</p>
+<p>There is no definitive rule for which annotations are open in the Neuroglancer canvases with a tomogram by default. However, all annotations can be opened in the canvas by clicking any annotation layers with strikethrough text in the list above the canvases. The annotations shown by default are manually chosen by the data curation team to display as many annotations as possible without overlap or occlusion. For example, when the cytoplasm is annotated as a whole, it would occlude other annotations, such as protein picks. When there is a ground truth and predicted annotation, the ground truth annotation is displayed by default. Authors contributing data can specify the desired default annotations during the submission process.</p>
+<p>The CryoET Data Portal napari plugin can be used to visualize tomograms, annotations, and metadata. Refer to <a class="reference external" href="https://github.com/chanzuckerberg/napari-cryoet-data-portal#usage">this documentation</a> to learn about how to use the plugin and to <a class="reference internal" href="cryoet_data_portal_docsite_napari.html"><span class="doc std std-doc">this page</span></a> to learn more about napari and CryoET Data Portal.</p>
+<h3 id="annotation-download-options">Annotation Download Options<a class="headerlink" href="#annotation-download-options" title="Link to this heading">#</a></h3>
+<p>Individual entries in the annotations table can be downloaded using the <code class="docutils literal notranslate"><span class="pre">Download</span></code> button on the right side of the table.</p>
+<p>Instance Segmentations, Oriented Points, and Points all can be downloaded directly in the browser as Newline Delimited JSON (ndJSON) files, where each line in the file is its own JSON. The download dialog also has instructions for downloading using curl, <a class="reference internal" href="cryoet_data_portal_docsite_aws.html"><span class="doc std std-doc">Amazon Web Services Command Line Interface</span></a> or the <a class="reference internal" href="python-api.html"><span class="doc std std-doc">Portal API</span></a>. In all cases, the JSON entries have a <code class="docutils literal notranslate"><span class="pre">type</span></code> field with instancePoint, orientedPoint, and point for Instance Segmentations, Oriented Points, and Points, respectively, and a <code class="docutils literal notranslate"><span class="pre">location</span></code> field with the x, y, z coordinates. For Instance Segmentations, there is also an <code class="docutils literal notranslate"><span class="pre">instance_id</span></code> to group points into geometric segmentation masks. For Oriented Points, there is also an <code class="docutils literal notranslate"><span class="pre">xyz_rotation_matrix</span></code> field with a 3x3 rotation matrix corresponding to each point.</p>
+<p>Semantic segmentation masks can downloaded using <a class="reference internal" href="cryoet_data_portal_docsite_aws.html"><span class="doc std std-doc">Amazon Web Services Command Line Interface</span></a> or the <a class="reference internal" href="python-api.html"><span class="doc std std-doc">Portal API</span></a> as MRC files or OME-Zarr directories. When downloading all annotations on a Run Overview page, both the MRC file and the OME-Zarr directory will be downloaded for each segmentation mask.</p>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro_cryoet.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to CryoET</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cryoet_workflow.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CryoET Workflow</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> None
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#depositions">Depositions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runs">Runs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tilt-series">Tilt Series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tomograms">Tomograms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annotations">Annotations</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Biohub and Awesome-ESM Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026 Awesome-ESM Contributors.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

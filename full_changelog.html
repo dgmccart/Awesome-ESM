@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Changelog" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dgmccart.github.io/full_changelog.html" />
+<meta property="og:site_name" content="Awesome-ESM Documentation" />
+<meta property="og:description" content="4.5.0(2025-07-28): ✨ Features: Adding cross modality fields to schema (#1911) ( d57111e). 🧹 Miscellaneous Chores: Fix typo in AnnotationFile API documentation (#1844) ( d538d9c), Update example IDs..." />
+<meta property="og:image" content="https://dgmccart.github.io/_static/img/logo.svg" />
+<meta property="og:image:alt" content="Awesome-ESM Documentation" />
+<meta name="description" content="4.5.0(2025-07-28): ✨ Features: Adding cross modality fields to schema (#1911) ( d57111e). 🧹 Miscellaneous Chores: Fix typo in AnnotationFile API documentation (#1844) ( d538d9c), Update example IDs..." />
+
+    <title>Changelog &#8212; Awesome-ESM Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_immaterial_theme.140ae81b18dd3ac08.min.css?v=137fc61d" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'full_changelog';</script>
+    <script src="_static/js/faq.js?v=b6be1a0a"></script>
+    <script src="_static/js/version_redirect.js?v=80bed784"></script>
+    <link rel="icon" href="_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorials" href="tutorials.html" />
+    <link rel="prev" title="Release Notes" href="release_notes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/biohub-logo-dark.png" class="logo__image only-light" alt="Awesome-ESM Documentation - Home"/>
+    <script>document.write(`<img src="_static/biohub-logo-light.png" class="logo__image only-dark" alt="Awesome-ESM Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_landing.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_quick_start.html">Quickstart</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="python-api.html">Python API</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html">API reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Changelog</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_aws.html">Download Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_napari.html">Using napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_sample_boundaries.html">Predicting sample boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuroglancer_quickstart.html">Neuroglancer Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_aretomo3.html">AreTomoLive Demo using data from the CryoET Data Portal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="about.html">About CryoET Data Portal</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro_cryoet.html">Introduction to CryoET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_data.html">Data Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_workflow.html">CryoET Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_ctf.html">CryoET Image Processing Challenges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing_data.html">Contribute Data to the Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdpo.html">CryoET Data Portal Ontology (CDPO)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_faq.html">FAQ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/edit/main/docs/full_changelog.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/issues/new?title=Issue%20on%20page%20%2Ffull_changelog.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/full_changelog.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Changelog</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> None </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.5.0 (2025-07-28)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-chores">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.4.1 (2025-04-08)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4.4.0 (2025-03-24)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">✨ Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.3.1 (2025-02-18)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-fixes">🐞 Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">4.3.0 (2024-12-19)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4.2.1 (2024-12-06)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">🐞 Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4.2.0 (2024-11-27)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">4.1.0 (2024-11-21)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">🐞 Bug Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">📝 Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">4.0.0 (2024-10-30)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-changes">⚠ BREAKING CHANGES</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">✨ Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">3.1.1 (2024-10-28)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">📝 Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">3.1.0 (2024-08-22)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">🐞 Bug Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
+<h2 id="id1"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v4.4.1...cryoet-data-portal-python-client-v4.5.0">4.5.0</a> (2025-07-28)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h3 id="features">✨ Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Adding cross modality fields to schema (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1911">#1911</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/d57111e79cc9030901d9c9b41cd08235dde6c422">d57111e</a>)</p></li>
+</ul>
+<h3 id="miscellaneous-chores">🧹 Miscellaneous Chores<a class="headerlink" href="#miscellaneous-chores" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fix typo in AnnotationFile API documentation (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1844">#1844</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/d538d9c3db05a661c2b28b1f4bcedf0580c84148">d538d9c</a>)</p></li>
+<li><p>Update example IDs to more realistic number (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1845">#1845</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/8f48185e68c329b2efc780d540ddb0341158e913">8f48185</a>)</p></li>
+</ul>
+<h2 id="id2"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v4.4.0...cryoet-data-portal-python-client-v4.4.1">4.4.1</a> (2025-04-08)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<h3 id="id3">🧹 Miscellaneous Chores<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Updating documentation (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/830074d9f453a9a1afb77eae252082d108763ab3">830074d</a>)</p></li>
+<li><p>Updating documentation generation for PerSectionParameters (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1751">#1751</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/830074d9f453a9a1afb77eae252082d108763ab3">830074d</a>)</p></li>
+</ul>
+<h2 id="id4"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v4.3.1...cryoet-data-portal-python-client-v4.4.0">4.4.0</a> (2025-03-24)<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<h3 id="id5">✨ Features<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Adding Frames and CTF components (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1722">#1722</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/8e8274700f9ab12880c3de8e7ae29e7e73100c99">8e82747</a>)</p></li>
+</ul>
+<h2 id="id6"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v4.3.0...cryoet-data-portal-python-client-v4.3.1">4.3.1</a> (2025-02-18)<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<h3 id="bug-fixes">🐞 Bug Fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Remove duplicated tooltip from Annotated Objects list (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1460">#1460</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/a42889e933efb0cbb56a7d7825bf4199c40bdcd1">a42889e</a>)</p></li>
+</ul>
+<h2 id="id7"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v4.2.1...cryoet-data-portal-python-client-v4.3.0">4.3.0</a> (2024-12-19)<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<h3 id="id8">✨ Features<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>add size fields to TiltSeries (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1406">#1406</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/3b8e709a5d44be4085be54c780723fb6910fb521">3b8e709</a>)</p></li>
+</ul>
+<h3 id="id9">🧹 Miscellaneous Chores<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>update python matrix (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1407">#1407</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/639cd901ca4c0def4baa1bdd6e8bd1aeb011a46e">639cd90</a>)</p></li>
+</ul>
+<h2 id="id10"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v4.2.0...cryoet-data-portal-python-client-v4.2.1">4.2.1</a> (2024-12-06)<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<h3 id="id11">🐞 Bug Fixes<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>fix argument and return value handling for get_by_id (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1380">#1380</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/2504e4d8c5aaf5eae1afb69f24b62c77b2843d08">2504e4d</a>)</p></li>
+<li><p>Fix generated examples formatting (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1369">#1369</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/6cf847348365aa1f24f62123c4a50c9cb97ab25d">6cf8473</a>)</p></li>
+</ul>
+<h2 id="id12"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v4.1.0...cryoet-data-portal-python-client-v4.2.0">4.2.0</a> (2024-11-27)<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<h3 id="id13">✨ Features<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Support a Client object being shared between threads. (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1351">#1351</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/ebdc7db5069303b8d63481fdee990936c02b2a6a">ebdc7db</a>)</p></li>
+</ul>
+<h3 id="id14">🧹 Miscellaneous Chores<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Make threading tests more concise. (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1355">#1355</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/538a480497bbb91f280aafa30664e4c9f5e055c4">538a480</a>)</p></li>
+</ul>
+<h2 id="id15"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v4.0.0...cryoet-data-portal-python-client-v4.1.0">4.1.0</a> (2024-11-21)<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<h3 id="id16">✨ Features<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>codegeneration for docstrings (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1307">#1307</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/cf0a0085bf39965bf06b7318af347f50eb0f9b32">cf0a008</a>)</p></li>
+</ul>
+<h3 id="id17">🐞 Bug Fixes<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fixes for relationship field naming. (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1348">#1348</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/703d470787420c1f24f731004c6b62b5a13126a4">703d470</a>)</p></li>
+</ul>
+<h3 id="documentation">📝 Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Final edits before ML Challenge (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1313">#1313</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/a67598344265d7dbec52ff5c1bfce79a3dd2dd2d">a675983</a>)</p></li>
+</ul>
+<h2 id="id18"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v3.1.1...cryoet-data-portal-python-client-v4.0.0">4.0.0</a> (2024-10-30)<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<h3 id="breaking-changes">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Initial support for apiv2 (https://github.com/chanzuckerberg/cryoet-data-portal/pull/1085)</p></li>
+</ul>
+<h3 id="id19">✨ Features<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Initial support for apiv2 (https://github.com/chanzuckerberg/cryoet-data-portal/pull/1085) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/fec400066d03361f68a9a12865842b83930f410c">fec4000</a>)</p></li>
+</ul>
+<h2 id="id20"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v3.1.0...cryoet-data-portal-python-client-v3.1.1">3.1.1</a> (2024-10-28)<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<h3 id="id21">📝 Documentation<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Move documentation site to Sphinx Immaterial (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1087">#1087</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/5d549dce37e69c1e9ddbf76c8cfaf28581419cda">5d549dc</a>)</p></li>
+</ul>
+<h2 id="id22"><a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/compare/cryoet-data-portal-python-client-v3.0.3...cryoet-data-portal-python-client-v3.1.0">3.1.0</a> (2024-08-22)<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<h3 id="id23">✨ Features<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>add user agent to client requests (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/966">#966</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/8209cd46cb8ab21341c7ee94672db3bae78f9aa2">8209cd4</a>)</p></li>
+<li><p>Generate Python client code using GraphQL introspection (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1008">#1008</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/35b72656e77132c9d64cc077705da8940bb29e44">35b7265</a>)</p></li>
+</ul>
+<h3 id="id24">🐞 Bug Fixes<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>create recursive_from_prefix path if it does not exist (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/940">#940</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/0069f080987ac05efef82d024cb17f4dc307a0f3">0069f08</a>)</p></li>
+<li><p>Use match with substring for exception check in client tests (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/895">#895</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/07352ecdb8c6f50ffe97ff7be9777c0cf6dd66cb">07352ec</a>)</p></li>
+<li><p>wait for graphql to be healthy in client tests (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1044">#1044</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/65f0a4b76783ad32bbe439f62fc32f0cae3ae646">65f0a4b</a>), closes <a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/942">#942</a></p></li>
+</ul>
+<h3 id="id25">🧹 Miscellaneous Chores<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Add additional test case to TestGetDestinationPath (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/955">#955</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/a9412a80f3b24ff94b0803fdd59d3583b4521706">a9412a8</a>)</p></li>
+<li><p>add instructions and commands to manually release the python package. (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/1073">#1073</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/4833eb95d32ee06a5608e69d6aebf013b1c9fd73">4833eb9</a>)</p></li>
+<li><p>automate release of python client (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/issues/972">#972</a>) (<a class="reference external" href="https://github.com/chanzuckerberg/cryoet-data-portal/commit/073bff7180e2ac3b390cac6a5665b63a7f00e472">073bff7</a>)</p></li>
+</ul>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="release_notes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Release Notes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tutorials.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tutorials</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> None
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.5.0 (2025-07-28)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#miscellaneous-chores">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.4.1 (2025-04-08)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">4.4.0 (2025-03-24)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">✨ Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.3.1 (2025-02-18)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-fixes">🐞 Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">4.3.0 (2024-12-19)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">4.2.1 (2024-12-06)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">🐞 Bug Fixes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4.2.0 (2024-11-27)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">4.1.0 (2024-11-21)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">🐞 Bug Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">📝 Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">4.0.0 (2024-10-30)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-changes">⚠ BREAKING CHANGES</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">✨ Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">3.1.1 (2024-10-28)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">📝 Documentation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">3.1.0 (2024-08-22)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">✨ Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">🐞 Bug Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">🧹 Miscellaneous Chores</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Biohub and Awesome-ESM Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026 Awesome-ESM Contributors.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="AreTomoLive Demo using data from the CryoET Data Portal" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dgmccart.github.io/tutorial_aretomo3.html" />
+<meta property="og:site_name" content="Awesome-ESM Documentation" />
+<meta property="og:description" content="This guide introduces the AreTomoLive[1] pipeline to perform cryoET data preprocessing, spanning motion correction of the acquired tilt-movies to contrast enhancement of the reconstructed tomograms..." />
+<meta property="og:image" content="https://dgmccart.github.io/_static/img/logo.svg" />
+<meta property="og:image:alt" content="Awesome-ESM Documentation" />
+<meta name="description" content="This guide introduces the AreTomoLive[1] pipeline to perform cryoET data preprocessing, spanning motion correction of the acquired tilt-movies to contrast enhancement of the reconstructed tomograms..." />
+
+    <title>AreTomoLive Demo using data from the CryoET Data Portal &#8212; Awesome-ESM Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_immaterial_theme.140ae81b18dd3ac08.min.css?v=137fc61d" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorial_aretomo3';</script>
+    <script src="_static/js/faq.js?v=b6be1a0a"></script>
+    <script src="_static/js/version_redirect.js?v=80bed784"></script>
+    <link rel="icon" href="_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="About CryoET Data Portal" href="about.html" />
+    <link rel="prev" title="Neuroglancer Quickstart" href="neuroglancer_quickstart.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/biohub-logo-dark.png" class="logo__image only-light" alt="Awesome-ESM Documentation - Home"/>
+    <script>document.write(`<img src="_static/biohub-logo-light.png" class="logo__image only-dark" alt="Awesome-ESM Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_landing.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_quick_start.html">Quickstart</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="python-api.html">Python API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html">API reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="full_changelog.html">Changelog</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tutorials.html">Tutorials</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_aws.html">Download Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_napari.html">Using napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_sample_boundaries.html">Predicting sample boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuroglancer_quickstart.html">Neuroglancer Quickstart</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">AreTomoLive Demo using data from the CryoET Data Portal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="about.html">About CryoET Data Portal</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro_cryoet.html">Introduction to CryoET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_data.html">Data Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_workflow.html">CryoET Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_ctf.html">CryoET Image Processing Challenges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing_data.html">Contribute Data to the Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdpo.html">CryoET Data Portal Ontology (CDPO)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_faq.html">FAQ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/edit/main/docs/tutorial_aretomo3.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/issues/new?title=Issue%20on%20page%20%2Ftutorial_aretomo3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tutorial_aretomo3.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>AreTomoLive Demo using data from the CryoET Data Portal</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> None </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background-information">Background Information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-instructions">Demo Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact">Contact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1 id="aretomolive-demo-using-data-from-the-cryoet-data-portal"><span id="tutorial-aretomo3"></span>AreTomoLive Demo using data from the CryoET Data Portal<a class="headerlink" href="#aretomolive-demo-using-data-from-the-cryoet-data-portal" title="Link to this heading">#</a></h1>
+<p>This guide introduces the AreTomoLive <a class="reference internal" href="#references">[1]</a> pipeline to perform cryoET data preprocessing, spanning motion
+correction of the acquired tilt-movies to contrast enhancement of the reconstructed tomograms. The AreTomoLive pipeline
+consists of two GPU-accelerated packages, AreTomo3 and DenoisET. AreTomo3 provides a fully automated,
+multi-GPU-accelerated workflow to reconstruct tomograms from raw tilt-series with quality metrics reported. DenoisET
+implements the machine learning algorithm Noise2Noise and is designed to run in parallel with AreTomo3 to perform
+contrast enhancement. This demo provides instructions for running both packages on a dataset of purified synaptosomes,
+which is available on the CryoET Data Portal.</p>
+<h2 id="background-information">Background Information<a class="headerlink" href="#background-information" title="Link to this heading">#</a></h2>
+<h3 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h3>
+<p>The dataset of purified synaptosomes used in this demo is <a class="reference external" href="https://cryoetdataportal.czscience.com/datasets/10447">available on the CryoET Data Portal</a>, with some additional details below:</p>
+<ul class="simple">
+<li><p>The sample of purified synaptosomes was generated from rat hippocampi.</p></li>
+<li><p>The full dataset includes 76 runs. Each run contains the raw movies, the motion-corrected tilt-series, two types of
+tomograms, and membrane segmentations. Only the raw movies are needed to test AreTomoLive.</p></li>
+<li><p>The tomograms on the CryoET Data Portal were also reconstructed by AreTomo3 and denoised by DenoisET so can be
+compared with the tomograms from this demo.</p></li>
+</ul>
+<p>The options to download this dataset are:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">AWS CLI (used in this demo)</a></p></li>
+<li><p><a class="reference external" href="https://chanzuckerberg.github.io/cryoet-data-portal/python-api.html">The CryoET Data Portal API</a></p></li>
+</ol>
+<h3 id="software">Software<a class="headerlink" href="#software" title="Link to this heading">#</a></h3>
+<p>Both software packages used in this tutorial are publicly available on GitHub:</p>
+<ol class="arabic">
+<li><p>AreTomo3: <a class="github reference external" href="https://github.com/czimaginginstitute/AreTomo3">czimaginginstitute/AreTomo3</a></p>
+<p>The latest version on GitHub and in this demo is 2.1.3. You can download a <a class="reference external" href="https://github.com/czimaginginstitute/AreTomo3/releases/tag/v2.1.3">pre-compiled executable from GitHub</a>.</p>
+</li>
+<li><p>DenoisET: <a class="github reference external" href="https://github.com/apeck12/denoiset">apeck12/denoiset</a></p>
+<p>The latest version on GitHub is 0.1.0. Dependencies are specified in the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file.</p>
+</li>
+</ol>
+<h3 id="hardware-requirements">Hardware Requirements<a class="headerlink" href="#hardware-requirements" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>A Linux workstation or Linux HPC equipped with at least 1 NVIDIA GPU card</p></li>
+<li><p>Minimum CUDA version: 12.0.0</p></li>
+<li><p>Minimum CPU RAM: 64 GB x number of GPUs for AreTomo3, 96 GB on 1 GPU for DenoisET</p></li>
+<li><p>For the data in this tutorial, minimum disk storage: ∼20 GB for 10 tilt series or ∼152 GB for the full dataset (76 tilt series)</p></li>
+</ol>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>For AreTomo3, a pre-compiled executable is provided with this tutorial. Alternatively, the GitHub link provides
+instructions for how to compile the code from scratch.</p></li>
+<li><p>For DenoisET, the following commands install the code in a new conda environment on a GPU-available machine:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/apeck12/denoiset.git
+<span class="nb">cd</span><span class="w"> </span>denoiset
+conda<span class="w"> </span>create<span class="w"> </span><span class="se">\-</span>-name<span class="w"> </span>denoiset<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11.4
+conda<span class="w"> </span>activate<span class="w"> </span>denoiset
+pip<span class="w"> </span>install<span class="w"> </span>.
+</code></pre></div>
+</div>
+<h2 id="demo-instructions">Demo Instructions<a class="headerlink" href="#demo-instructions" title="Link to this heading">#</a></h2>
+<h3 id="step-0-download-the-dataset">Step 0: Download the dataset<a class="headerlink" href="#step-0-download-the-dataset" title="Link to this heading">#</a></h3>
+<p>Download the tilt-series frames in <code class="docutils literal notranslate"><span class="pre">.eer</span></code> format, gain reference, and mdoc files to a flat directory structure. Each
+tilt series is about 2 GB.</p>
+<ul class="simple">
+<li><p>If only running DenoisET in live inference mode with a pre-trained model, download 10 tilt-series.</p></li>
+<li><p>If training a new denoising model from scratch, we recommend downloading the full dataset, which contains 76 tilt-series.</p></li>
+</ul>
+<p>Example bash code for using AWS-CLI to download the full dataset to <code class="docutils literal notranslate"><span class="pre">$DESTINATION_PATH</span></code>. Downloading these 76
+tilt-series with ∼1GB/s download speed takes approximately 30 minutes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+DESTINATION<span class="se">\_</span>PATH<span class="o">=</span><span class="s2">&quot;/processing/basepath/raw\_data&quot;</span>
+
+<span class="k">for</span><span class="w"> </span>dir<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>aws<span class="w"> </span>s3<span class="w"> </span>--no-sign-request<span class="w"> </span>ls<span class="w"> </span>s3://cryoet-data-portal-public/10447/<span class="w"> </span>--recursive<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+grep<span class="w"> </span><span class="s1">&#39;/Frames/&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $4}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span><span class="se">\-</span>d<span class="s1">&#39;/&#39;</span><span class="w"> </span>-f1-3<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-u<span class="w"> </span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="c1"># Specify the flat destination directory</span>
+<span class="w">    </span><span class="nv">local_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$DESTINATION_PATH</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="c1"># Create the destination directory if it does not exist</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$local_dir</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="c1"># Sync files from S3 to local directory in flat structure</span>
+<span class="w">    </span>aws<span class="w"> </span>s3<span class="w"> </span>sync<span class="w"> </span><span class="s2">&quot;s3://cryoet-data-portal-public/</span><span class="nv">$dir</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$local_dir</span><span class="s2">&quot;</span><span class="w"> </span>--no-sign-request<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--exact-timestamps
+<span class="k">done</span>
+</code></pre></div>
+</div>
+<p>Also download the gain reference to <code class="docutils literal notranslate"><span class="pre">DESTINATION_GAIN_PATH</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nv">DESTINATION_GAIN_PATH</span><span class="o">=</span><span class="s2">&quot;/processing/basepath/gain\_ref&quot;</span>
+aws<span class="w"> </span>s3<span class="w"> </span>sync<span class="w"> </span><span class="s2">&quot;s3://cryoet-data-portal-public/10447/24sep26a_Position_1/Gains&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">&quot;</span><span class="nv">$DESTINATION_GAIN_PATH</span><span class="s2">&quot;</span><span class="w"> </span>--no-sign-request<span class="w"> </span>--exact-timestamps
+</code></pre></div>
+</div>
+<h3 id="step-1-run-aretomo3">Step 1: Run AreTomo3<a class="headerlink" href="#step-1-run-aretomo3" title="Link to this heading">#</a></h3>
+<p>To check the AreTomo3 executable and see the help menu, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>/path/to/aretomo3_executable<span class="w"> </span>--help
+</code></pre></div>
+</div>
+<p>Starting from raw tilt-series frames in a flat directory structure (<code class="docutils literal notranslate"><span class="pre">$IN_PREFIX</span></code>), the following AreTomo3 command
+applies both local and global corrections for beam-induced motion (BIM) in 2D and 3D. Tomograms are then reconstructed
+by weighted backprojection, with a local correction for the contrast transfer function (CTF) applied:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nv">IN_PREFIX</span><span class="o">=</span><span class="s2">&quot;/processing/basepath/raw_data/24sep26a_Position_&quot;</span>
+<span class="nv">OUT_DIR</span><span class="o">=</span><span class="s2">&quot;/processing/basepath/aretomo3_output&quot;</span>
+<span class="nv">GAIN_PATH</span><span class="o">=</span><span class="s2">&quot;/processing/basepath/gain_ref/20240924_101412_EER_GainReference.gain&quot;</span>
+
+/path/to/AreTomo3_2.1.3_03-19-2025<span class="w"> </span>-InPrefix<span class="w"> </span><span class="nv">$IN_PREFIX</span><span class="w"> </span>-InSuffix<span class="w"> </span>.mdoc<span class="w"> </span>-OutDir<span class="w"> </span><span class="nv">$OUT_DIR</span><span class="w"> </span><span class="se">\</span>
+-Gain<span class="w"> </span><span class="nv">$GAIN_PATH</span><span class="w"> </span>-PixSize<span class="w"> </span><span class="m">1</span>.54<span class="w"> </span>-kV<span class="w"> </span><span class="m">300</span><span class="w"> </span>-Cs<span class="w"> </span><span class="m">2</span>.7<span class="w"> </span>-SplitSum<span class="w"> </span><span class="m">1</span><span class="w"> </span>-McPatch<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="w"> </span>-McBin<span class="w"> </span><span class="m">1</span><span class="w"> </span>-Group<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
+-AtPatch<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">4</span><span class="w"> </span>-AtBin<span class="w"> </span><span class="m">3</span>.25<span class="w"> </span>-OutImod<span class="w"> </span><span class="m">1</span><span class="w"> </span>-Wbp<span class="w"> </span><span class="m">1</span><span class="w"> </span>-CorrCTF<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">15</span><span class="w"> </span>-FlipVol<span class="w"> </span><span class="m">1</span><span class="w"> </span>-Gpu<span class="w"> </span><span class="m">0</span>,1,2,3,4,5,6,7<span class="w"> </span><span class="se">\</span>
+-Serial<span class="w"> </span><span class="m">1000</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+</div>
+<p>The instruction manual on GitHub contains more details about the command-line arguments, but below we provide a few
+notes about the most frequently adjusted arguments:</p>
+<ul class="simple">
+<li><p>If denoising using a pretrained model, modify the above to: <code class="docutils literal notranslate"><span class="pre">-SplitSum</span> <span class="pre">0</span></code> to prevent writing out even (<code class="docutils literal notranslate"><span class="pre">*EVN</span> <span class="pre">Vol.mrc</span></code>)
+and odd (<code class="docutils literal notranslate"><span class="pre">*ODD</span> <span class="pre">Vol.mrc</span></code>) volumes.</p></li>
+<li><p>The pixel size of the reconstruction is the product of <code class="docutils literal notranslate"><span class="pre">PixSize</span></code>, <code class="docutils literal notranslate"><span class="pre">McBin</span></code>, and <code class="docutils literal notranslate"><span class="pre">AtBin</span></code>, which correspond to the pixel
+size of the raw frames, the bin factor to generate the motion-corrected tilt-series, and the bin factor used during
+reconstruction. The above command reconstructs tomograms with a 5 Å pixel size.</p></li>
+</ul>
+<p>On a Linux server equipped with 8 NVIDIA RTX A6000 GPUs, AreTomo3 finished processing all 76 tilt-series in approximately 3 hours.</p>
+<h3 id="step-2-run-denoiset">Step 2: Run DenoisET<a class="headerlink" href="#step-2-run-denoiset" title="Link to this heading">#</a></h3>
+<p>Once in the <code class="docutils literal notranslate"><span class="pre">denoiset</span></code> conda environment, the following command checks the installation and provides a list of command-line arguments:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code>denoise3d<span class="w"> </span>--help
+</code></pre></div>
+</div>
+<p>The following command runs denoising live in parallel with AreTomo3:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nv">input</span><span class="o">=</span><span class="s2">&quot;/processing/basepath/aretomo3_output&quot;</span>
+<span class="nv">output</span><span class="o">=</span><span class="s2">&quot;/processing/basepath/denoiset_output_live_train&quot;</span>
+
+denoise3d<span class="w"> </span><span class="se">\</span>
+--input<span class="w"> </span><span class="si">${</span><span class="nv">input</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+--output<span class="w"> </span><span class="si">${</span><span class="nv">output</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+--metrics_file<span class="w"> </span><span class="si">${</span><span class="nv">input</span><span class="si">}</span>/TiltSeries_Metrics.csv<span class="w"> </span><span class="se">\</span>
+--tilt_axis<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span><span class="se">\</span>
+--global_shift<span class="w"> </span><span class="m">400</span><span class="w"> </span><span class="se">\</span>
+--ctf_res<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="se">\</span>
+--ctf_score<span class="w"> </span><span class="m">0</span>.2<span class="w"> </span><span class="se">\</span>
+--bad_patch_low<span class="w"> </span><span class="m">0</span>.01<span class="w"> </span><span class="se">\</span>
+--bad_patch_all<span class="w"> </span><span class="m">0</span>.05<span class="w"> </span><span class="se">\</span>
+--min_selected<span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="se">\</span>
+--live<span class="w"> </span><span class="se">\</span>
+--t_exit<span class="w"> </span><span class="m">7200</span>
+</code></pre></div>
+</div>
+<p>Since the default thresholds for the metrics-related arguments were set based on our experience with lamella data, these
+thresholds are adjusted above to be more selective for the synaptosome dataset. This command can be run immediately
+after AreTomo3 processing starts. On a single NVIDIA RTX A40 GPU, training and inference finished in 7 hours when we ran
+this command concurrently with AreTomo3, which includes the time spent monitoring for sufficient high-quality tomograms
+to use for training. However, training time is stochastic and will vary between runs. If the output tomograms appear to
+be insufficiently denoised, we recommend increasing the <code class="docutils literal notranslate"><span class="pre">min_selected</span></code> or <code class="docutils literal notranslate"><span class="pre">n_extract</span></code> (default: 250) parameters.</p>
+<p>Alternatively, if a suitable pretrained model is available, inference can run live in parallel with AreTomo3:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><code><span class="nv">input</span><span class="o">=</span><span class="s2">&quot;/processing/basepath/aretomo3_output&quot;</span>
+<span class="nv">output_inference</span><span class="o">=</span><span class="s2">&quot;/processing/basepath/denoiset_output&quot;</span>
+<span class="nv">model</span><span class="o">=</span><span class="s2">&quot;/path/to/denoiset/models/synaptosome.pth&quot;</span>
+
+predict3d<span class="w"> </span>--input<span class="w"> </span><span class="si">${</span><span class="nv">input</span><span class="si">}</span><span class="w"> </span>--output<span class="w"> </span><span class="si">${</span><span class="nv">output_inference</span><span class="si">}</span><span class="w"> </span>--model<span class="w"> </span><span class="si">${</span><span class="nv">model</span><span class="si">}</span><span class="w"> </span>--live<span class="w"> </span>--t_exit<span class="w"> </span><span class="m">7200</span>
+</code></pre></div>
+</div>
+<p>On a single NVIDIA RTX A40 GPU, inference for all 76 tilt-series using this pretrained model finished in ap proximately
+3 hours when run concurrently with AreTomo3 and 2 hours when run separately after AreTomo3 had already finished.</p>
+<h2 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading">#</a></h2>
+<figure class="only-light align-default" id="id1">
+<img alt="expected output" src="figures/aretomo_output.png" />
+<figcaption>
+<p><span class="caption-text"><span class="caption-text">
+The same slice is visualized through <strong>a.</strong> the CTF-deconvolved tomogram reconstructed by AreTomo3 and this tomogram after denoising with <strong>b.</strong> the provided pre-trained model or <strong>c.</strong> the new model trained from scratch.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></figcaption>
+</figure>
+<figure class="only-dark align-default" id="id2">
+<img alt="expected output" src="figures/aretomo_output.png" />
+<figcaption>
+<p><span class="caption-text"><span class="caption-text">
+The same slice is visualized through <strong>a.</strong> the CTF-deconvolved tomogram reconstructed by AreTomo3 and this tomogram after denoising with <strong>b.</strong> the provided pre-trained model or <strong>c.</strong> the new model trained from scratch.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></figcaption>
+</figure>
+<h3 id="aretomo3-output-files">AreTomo3 output files<a class="headerlink" href="#aretomo3-output-files" title="Link to this heading">#</a></h3>
+<p>The following files will be found in the main output folder:</p>
+<ol class="arabic simple">
+<li><p>General files</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AreTomo3_Session.json</span></code>: record of the run parameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TiltSeries_Metrics.csv</span></code>: record of the tilt-series quality metrics</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MdocDone.txt</span></code>: list of the processed tilt-series</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TiltSeries_TimeStamp.csv</span></code>: list of processing timestamps</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Per tilt-series (run) files</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{run}.aln</span></code>: record of global and local alignments</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{run}.mrc</span></code>: 2D motion-corrected tilt-series (tomographically unaligned)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{run}CTF.mrc</span></code>, <code class="docutils literal notranslate"><span class="pre">{run}CTF.txt</span></code>: CTF fits and parameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{run}_Vol.mrc</span></code>: reconstructed volume</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Subfolders</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{run}_IMOD</span></code>: contains IMOD-style CTF and alignment files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{run}_Log</span></code>: stores log files for the processed tilt-series</p></li>
+</ul>
+<h3 id="denoiset-output-files">DenoisET output files<a class="headerlink" href="#denoiset-output-files" title="Link to this heading">#</a></h3>
+<p>The following files will be found in the main output folder:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">denoise3d.json</span></code> or <code class="docutils literal notranslate"><span class="pre">predict3d.json</span></code>: record of the run parameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{run}_Vol.mrc</span></code>: denoised tomogram</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">training</span></code>: if training from scratch, directory containing the following files:</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">epoch{n}.pth</span></code>: model weights from the nth epoch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{run}_epoch{n}.mrc</span></code>: representative denoised tomogram after the nth epoch</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">traininglist.txt</span></code>: list of tomograms selected for training</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">training_stats.csv</span></code>: per epoch statistics like training loss</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">traininglist.png</span></code>: figure comparing distribution of quality metrics for the selected and all tomograms</p></li>
+</ul>
+<h2 id="contact">Contact<a class="headerlink" href="#contact" title="Link to this heading">#</a></h2>
+<p>For questions or comments, please contact <a class="reference external" href="mailto:shawn&#46;zheng&#37;&#52;&#48;czii&#46;org">shawn<span>&#46;</span>zheng<span>&#64;</span>czii<span>&#46;</span>org</a> or <a class="reference external" href="mailto:ariana&#46;peck&#37;&#52;&#48;czii&#46;org">ariana<span>&#46;</span>peck<span>&#64;</span>czii<span>&#46;</span>org</a>.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<p><strong>[1]</strong> Ariana Peck, Yue Yu, Mohammadreza Paraan, Dari Kimanius, Utz Heinrich Ermel, Joshua Hutchings, Daniel Serwas, Hannah Siems, Norbert S Hill, Mallak Ali, et al. Aretomolive: Automated reconstruction of comprehensively-corrected and denoised cryo-electron tomograms in real-time and at high throughput. <em>bioRxiv</em>, pages 2025–03, 2025.</p>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="neuroglancer_quickstart.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Neuroglancer Quickstart</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="about.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">About CryoET Data Portal</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> None
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background-information">Background Information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#demo-instructions">Demo Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-output">Expected Output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contact">Contact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Biohub and Awesome-ESM Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026 Awesome-ESM Contributors.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

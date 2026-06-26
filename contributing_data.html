@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Contribute Data to the Portal" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://dgmccart.github.io/contributing_data.html" />
+<meta property="og:site_name" content="Awesome-ESM Documentation" />
+<meta property="og:description" content="The CryoET Data Portal supports a rapidly growing cryoET data corpus because of generous contributions from researchers like you! Submission and Publication Process: Read our data submission policy..." />
+<meta property="og:image" content="https://dgmccart.github.io/_static/img/logo.svg" />
+<meta property="og:image:alt" content="Awesome-ESM Documentation" />
+<meta name="description" content="The CryoET Data Portal supports a rapidly growing cryoET data corpus because of generous contributions from researchers like you! Submission and Publication Process: Read our data submission policy..." />
+
+    <title>Contribute Data to the Portal &#8212; Awesome-ESM Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_immaterial_theme.140ae81b18dd3ac08.min.css?v=137fc61d" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/sphinx_immaterial_theme.32136f45f91ae6956.min.js?v=a7a9472a"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contributing_data';</script>
+    <script src="_static/js/faq.js?v=b6be1a0a"></script>
+    <script src="_static/js/version_redirect.js?v=80bed784"></script>
+    <link rel="icon" href="_static/favicon.png"/>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CryoET Data Portal Ontology (CDPO)" href="cdpo.html" />
+    <link rel="prev" title="CryoET Image Processing Challenges" href="cryoet_ctf.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/biohub-logo-dark.png" class="logo__image only-light" alt="Awesome-ESM Documentation - Home"/>
+    <script>document.write(`<img src="_static/biohub-logo-light.png" class="logo__image only-dark" alt="Awesome-ESM Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_landing.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_quick_start.html">Quickstart</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="python-api.html">Python API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html">API reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_model.html">Data Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="full_changelog.html">Changelog</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorials.html">Tutorials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_aws.html">Download Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_examples.html">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_napari.html">Using napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_sample_boundaries.html">Predicting sample boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuroglancer_quickstart.html">Neuroglancer Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial_aretomo3.html">AreTomoLive Demo using data from the CryoET Data Portal</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="about.html">About CryoET Data Portal</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro_cryoet.html">Introduction to CryoET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_data_portal_docsite_data.html">Data Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_workflow.html">CryoET Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cryoet_ctf.html">CryoET Image Processing Challenges</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Contribute Data to the Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdpo.html">CryoET Data Portal Ontology (CDPO)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="cryoet_data_portal_docsite_faq.html">FAQ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/edit/main/docs/contributing_data.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dgmccart/Awesome-ESM/issues/new?title=Issue%20on%20page%20%2Fcontributing_data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/contributing_data.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Contribute Data to the Portal</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> None </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-and-publication-process">Submission and Publication Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata-requirements">Metadata Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary">Glossary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-of-full-datasets">Contribution of Full Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deposition-dataset-group">Deposition (Dataset Group)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#movie-stacks-acquisition">Movie Stacks / Acquisition</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tilt-series-required-per-run">Tilt Series (Required per Run)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alignment-required-per-run">Alignment (Required per Run)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tomograms-optional">Tomograms (optional)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#annotations-optional">Annotations (optional)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-of-annotations-for-existing-datasets">Contribution of Annotations for Existing Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deposition-annotation-group">Deposition (Annotation Group)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#annotations">Annotations</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-of-tomograms-for-existing-datasets">Contribution of Tomograms for Existing Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deposition-tomogram-group">Deposition (Tomogram Group)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tomograms-required-per-run">Tomograms (Required per Run)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alignment-required-if-new">Alignment (Required if New)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1 id="contribute-data-to-the-portal"><span id="contributing-data"></span>Contribute Data to the Portal<a class="headerlink" href="#contribute-data-to-the-portal" title="Link to this heading">#</a></h1>
+<p>The CryoET Data Portal supports a rapidly growing cryoET data corpus because of generous contributions from researchers like you!</p>
+<h2 id="submission-and-publication-process">Submission and Publication Process<a class="headerlink" href="#submission-and-publication-process" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Read our <a class="reference external" href="https://cryoetdataportal.czscience.com/data-submission-policy">data submission policy</a> (all data has a CC0 license) and <a class="reference internal" href="cryoet_data_portal_docsite_data.html#data-organization"><span class="std std-ref">data schema</span></a> to learn how data is shared and organized on the Portal.</p></li>
+<li><p>Review the <a class="reference internal" href="#metadata-requirements">metadata requirements</a> to understand the requirements of data submission.</p></li>
+<li><p><a class="reference external" href="https://airtable.com/apppmytRJXoXYTO9w/shr5UxgeQcUTSGyiY?prefill_Event=Portal&amp;amp;hide_Event=true">Contact us</a> and we’ll reach out with next steps.</p></li>
+</ol>
+<h2 id="metadata-requirements">Metadata Requirements<a class="headerlink" href="#metadata-requirements" title="Link to this heading">#</a></h2>
+<h3 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Deposition</strong>: Depositions are collections of datasets, annotations, and/or (in the future) tomograms contributed by the same author(s). The website currently shows only depositions that include annotations. <a class="reference external" href="https://cryoetdataportal.czscience.com/depositions/10312">Click here for an example</a></p></li>
+<li><p><strong>Dataset:</strong> Datasets are contributed sets of files associated with imaging one sample type with the same experimental conditions. <a class="reference external" href="https://cryoetdataportal.czscience.com/datasets/10452">Click here for an example</a></p></li>
+<li><p><strong>Run:</strong> A tomography run is a collection of all data and annotations related to one physical location in a sample and is associated with a dataset that typically contains many other runs. <a class="reference external" href="https://cryoetdataportal.czscience.com/runs/18177">Click here for an example</a></p></li>
+</ul>
+<h3 id="contribution-of-full-datasets">Contribution of Full Datasets<a class="headerlink" href="#contribution-of-full-datasets" title="Link to this heading">#</a></h3>
+<h4 id="deposition-dataset-group">Deposition (Dataset Group)<a class="headerlink" href="#deposition-dataset-group" title="Link to this heading">#</a></h4>
+<p>Dataset group depositions contain 1 or more datasets.</p>
+<p><strong>Required Metadata</strong></p>
+<ul class="simple">
+<li><p>Title</p></li>
+<li><p>Description (1-5 sentences)</p></li>
+<li><p>Authors (Name, ORCID, email, whether primary or corresponding)</p></li>
+<li><p>Cross-References (DOI, EMPIAR, EMDB, PDB)</p></li>
+</ul>
+<h4 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h4>
+<p><strong>Required Metadata</strong></p>
+<ul class="simple">
+<li><p>Title</p></li>
+<li><p>Description (1-5 sentences)</p></li>
+<li><p>Authors (Name, ORCID, email, whether primary or corresponding)</p></li>
+<li><p>Cross-References (DOI, EMPIAR, EMDB, PDB)</p></li>
+<li><p>Funding Information (Agency Name, Grant ID)</p></li>
+<li><p>Sample Type, one of:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cell</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tissue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organism</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organelle</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virus</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">in_vitro</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">in_silico</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">other</span></code></p></li>
+</ul>
+</li>
+<li><p>Description of sample preparation (steps separated by <code class="docutils literal notranslate"><span class="pre">+</span></code>)</p></li>
+<li><p>Description of grid preparation (steps separated by <code class="docutils literal notranslate"><span class="pre">+</span></code>)</p></li>
+<li><p>Description of other information not captured above</p></li>
+<li><p>Organism Name, ID (NCBI taxID)</p></li>
+<li><p>If cell:</p>
+<ul>
+<li><p>Cell Type Name, ID (cell ontology)</p></li>
+<li><p>Strain Name, ID</p></li>
+</ul>
+</li>
+<li><p>If tissue:</p>
+<ul>
+<li><p>Tissue Name, ID (UBERON identifier)</p></li>
+</ul>
+</li>
+<li><p>If organelle:</p>
+<ul>
+<li><p>Cell Component Name, ID (Gene Ontology)</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Optional Metadata</strong></p>
+<ul class="simple">
+<li><p><strong>File/URL</strong>: Key photo for the website</p></li>
+</ul>
+<h4 id="movie-stacks-acquisition">Movie Stacks / Acquisition<a class="headerlink" href="#movie-stacks-acquisition" title="Link to this heading">#</a></h4>
+<p><strong>Required Metadata per Run</strong></p>
+<ul class="simple">
+<li><p><strong>Files:</strong> Movie stacks in MRC, TIFF or EER format (or as listed, compressed)</p>
+<ul>
+<li><p>Should be able to be associated to a <strong>Run</strong> by file name or location</p></li>
+</ul>
+</li>
+<li><p><strong>File:</strong> 1 MDOC file per run or similar (indicating mapping to tilt series and tilt order)</p>
+<ul>
+<li><p>Should be able to be associated to a <strong>Run</strong> by file name or location</p></li>
+</ul>
+</li>
+<li><p>Whether already gain corrected (True/False)</p></li>
+<li><p>Acceleration Voltage</p></li>
+<li><p>Spherical Abberation</p></li>
+<li><p>Tilt range (min, max)</p></li>
+<li><p>Tilt Step</p></li>
+<li><p>Tilt Scheme</p></li>
+<li><p>dose per movie stack (preferred) or Total Dose per <strong>Run</strong></p></li>
+<li><p>Acquisition software</p></li>
+<li><p>Camera manufacturer and model</p></li>
+<li><p>Microscope manufacturer and model</p></li>
+<li><p>Microscope optical setup</p>
+<ul>
+<li><p>Energy Filter Name</p></li>
+<li><p>Image Corrector Type</p></li>
+<li><p>Phase Plate Type</p></li>
+</ul>
+</li>
+<li><p>Pixel Size (if not correct in file header)</p></li>
+</ul>
+<p><strong>Optional Metadata</strong></p>
+<ul class="simple">
+<li><p><strong>Files:</strong> Gain reference in MRC, DM4, GAIN format</p>
+<ul>
+<li><p>Should be able to be associated with a <strong>Run</strong> (e.g. provide CSV-mapping of run name to gain name)</p></li>
+</ul>
+</li>
+</ul>
+<h4 id="tilt-series-required-per-run">Tilt Series (Required per Run)<a class="headerlink" href="#tilt-series-required-per-run" title="Link to this heading">#</a></h4>
+<p><strong>Required Metadata per Run</strong></p>
+<ul class="simple">
+<li><p><strong>File:</strong> 1 Assembled tilt series in MRC or OME-Zarr format</p>
+<ul>
+<li><p>Should be able to be associated to a <strong>Run</strong> by file name or location</p></li>
+</ul>
+</li>
+<li><p><strong>File:</strong> Tilt angles in assembled tilt series in RAWTLT format (textfile, one angle per line)</p>
+<ul>
+<li><p>Should be able to be associated to a <strong>Run</strong> by file name or location</p></li>
+</ul>
+</li>
+<li><p>Authors (Name, ORCID, email, whether primary or corresponding)</p></li>
+<li><p>Binning from frames</p></li>
+<li><p>Pixel size (if not correct in header)</p></li>
+<li><p>Tilt axis rotation</p></li>
+<li><p>Whether is already transformed according to alignment in 2D</p></li>
+</ul>
+<p><strong>Optional Metadata</strong></p>
+<ul class="simple">
+<li><p>Subjective quality rating according to <a class="reference internal" href="cryoet_data_portal_docsite_data.html#tilt-series-quality"><span class="std std-ref">this scale</span></a></p></li>
+</ul>
+<h4 id="alignment-required-per-run">Alignment (Required per Run)<a class="headerlink" href="#alignment-required-per-run" title="Link to this heading">#</a></h4>
+<p><strong>Required Metadata per Run</strong></p>
+<ul class="simple">
+<li><p><strong>Files:</strong></p>
+<ul>
+<li><p>If aligned in IMOD (global alignments)</p>
+<ul>
+<li><p><strong>Required:</strong> XF file</p></li>
+<li><p><strong>Required:</strong> TLT file</p></li>
+<li><p><strong>Optional:</strong> XTILT file, tilt.com file, newst.com file</p></li>
+</ul>
+</li>
+<li><p>If aligned in AreTomo3:</p>
+<ul>
+<li><p><strong>Required:</strong> ALN-File</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Method type, one of:</p>
+<ul>
+<li><p>fiducial based</p></li>
+<li><p>patch tracking</p></li>
+<li><p>projection matching</p></li>
+</ul>
+</li>
+<li><p>Alignment type, one of:</p>
+<ul>
+<li><p>Global (rigid transformations only)</p></li>
+<li><p>Local (non-rigid transformations)</p></li>
+</ul>
+</li>
+<li><p>Any alignment parameters not captured by the alignment file</p>
+<ul>
+<li><p>Tilt offset</p></li>
+<li><p>Volume origin offset</p></li>
+<li><p>X-tilt offset</p></li>
+</ul>
+</li>
+</ul>
+<h4 id="tomograms-optional">Tomograms (optional)<a class="headerlink" href="#tomograms-optional" title="Link to this heading">#</a></h4>
+<p><strong>Required Metadata per Run</strong></p>
+<ul class="simple">
+<li><p><strong>File</strong>: at least one tomogram in MRC or OME-Zarr format</p>
+<ul>
+<li><p>Should be able to be associated to a <strong>Run</strong> by file name or location</p></li>
+</ul>
+</li>
+<li><p>Voxel size</p></li>
+<li><p>Ctf-corrected (True/False)</p></li>
+<li><p>Reconstruction method</p></li>
+<li><p>Reconstruction software</p></li>
+<li><p>Post-Processing (e.g. raw, denoised, filtered)</p></li>
+<li><p>Processing software</p></li>
+</ul>
+<h4 id="annotations-optional">Annotations (optional)<a class="headerlink" href="#annotations-optional" title="Link to this heading">#</a></h4>
+<p><strong>Required Metadata per Annotated Object</strong></p>
+<ul class="simple">
+<li><p>Object name</p></li>
+<li><p>Object ID (Gene Ontology or UniprotKB accession number)</p></li>
+</ul>
+<p><strong>Optional Metadata per Annotated Object</strong></p>
+<ul class="simple">
+<li><p>Object state</p></li>
+<li><p>Object description</p></li>
+</ul>
+<p><strong>Required Metadata per Annotation File</strong></p>
+<ul class="simple">
+<li><p><strong>File:</strong> Annotation in MRC, OME-Zarr, STAR (RELION, STOPGAP), CSV, GLB, STL, OBJ, VTK format</p>
+<ul>
+<li><p>At the same size, alignment, voxel spacing as one of the submitted tomograms.</p></li>
+</ul>
+</li>
+<li><p>Authors (Name, ORCID, email, whether primary or corresponding)</p></li>
+<li><p>Cross-References (DOI, EMPIAR, EMDB, PDB)</p></li>
+<li><p>Can be considered ground truth (True/False)</p></li>
+<li><p>Annotation method</p>
+<ul>
+<li><p>Description (steps separated by <code class="docutils literal notranslate"><span class="pre">+</span></code>)</p></li>
+<li><p>Annotation software</p></li>
+<li><p>Method links</p></li>
+<li><p>Method type, one of:</p>
+<ul>
+<li><p>Manual</p></li>
+<li><p>Hybrid</p></li>
+<li><p>Automated</p></li>
+<li><p>Simulated</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="contribution-of-annotations-for-existing-datasets">Contribution of Annotations for Existing Datasets<a class="headerlink" href="#contribution-of-annotations-for-existing-datasets" title="Link to this heading">#</a></h3>
+<h4 id="deposition-annotation-group">Deposition (Annotation Group)<a class="headerlink" href="#deposition-annotation-group" title="Link to this heading">#</a></h4>
+<p>Annotation group depositions contain annotations for one or more existing datasets</p>
+<p><strong>Required Metadata</strong></p>
+<ul class="simple">
+<li><p>Title</p></li>
+<li><p>Description (1-5 sentences)</p></li>
+<li><p>Authors (Name, ORCID, email, whether primary or corresponding)</p></li>
+<li><p>Cross-References (DOI, EMPIAR, EMDB, PDB)</p></li>
+</ul>
+<h4 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Link to this heading">#</a></h4>
+<p><strong>Required Metadata per Annotated Object</strong></p>
+<ul class="simple">
+<li><p>Object name</p></li>
+<li><p>Object ID (Gene Ontology or UniprotKB accession number)</p></li>
+<li><p>Object state</p></li>
+</ul>
+<p><strong>Optional Metadata per Annotated Object</strong></p>
+<ul class="simple">
+<li><p>Object description</p></li>
+</ul>
+<p><strong>Required Metadata per Annotation File</strong></p>
+<ul class="simple">
+<li><p><strong>File:</strong> Annotation in MRC, OME-Zarr, STAR (RELION, STOPGAP), CSV, GLB, STL, OBJ, VTK format</p>
+<ul>
+<li><p>At the same size, alignment, voxel spacing as one of the existing tomograms.</p></li>
+</ul>
+</li>
+<li><p>Authors (Name, ORCID, email, whether primary or corresponding)</p></li>
+<li><p>Cross-References  (DOI, EMPIAR, EMDB, PDB)</p></li>
+<li><p>Can be considered ground truth (True/False)</p></li>
+<li><p>Annotation method</p>
+<ul>
+<li><p>Description (steps separated by <code class="docutils literal notranslate"><span class="pre">+</span></code>)</p></li>
+<li><p>Annotation software</p></li>
+<li><p>Method links</p></li>
+<li><p>Method type, one of:</p>
+<ul>
+<li><p>Manual</p></li>
+<li><p>Hybrid</p></li>
+<li><p>Automated</p></li>
+<li><p>Simulated</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="contribution-of-tomograms-for-existing-datasets">Contribution of Tomograms for Existing Datasets<a class="headerlink" href="#contribution-of-tomograms-for-existing-datasets" title="Link to this heading">#</a></h3>
+<h4 id="deposition-tomogram-group">Deposition (Tomogram Group)<a class="headerlink" href="#deposition-tomogram-group" title="Link to this heading">#</a></h4>
+<p>Tomogram group depositions contain 1 or more tomograms for an existing dataset.</p>
+<p><strong>Required Metadata</strong></p>
+<ul class="simple">
+<li><p>Title</p></li>
+<li><p>Description (1-5 sentences)</p></li>
+<li><p>Authors (Name, ORCID, email, whether primary or corresponding)</p></li>
+<li><p>Cross-References (DOI, EMPIAR, EMDB, PDB)</p></li>
+</ul>
+<h4 id="tomograms-required-per-run">Tomograms (Required per Run)<a class="headerlink" href="#tomograms-required-per-run" title="Link to this heading">#</a></h4>
+<p><strong>Required Metadata per Run</strong></p>
+<ul class="simple">
+<li><p><strong>File</strong>: at least one tomogram in MRC or OME-Zarr format</p>
+<ul>
+<li><p>Should be able to be associated to a <strong>Run</strong> by file name or location</p></li>
+</ul>
+</li>
+<li><p>Voxel size</p></li>
+<li><p>Ctf-corrected (True/False)</p></li>
+<li><p>Reconstruction method</p></li>
+<li><p>Reconstruction software</p></li>
+<li><p>Post-Processing (e.g. raw, denoised, filtered)</p></li>
+<li><p>Processing software</p></li>
+</ul>
+<h4 id="alignment-required-if-new">Alignment (Required if New)<a class="headerlink" href="#alignment-required-if-new" title="Link to this heading">#</a></h4>
+<p>If none of the existing alignments was used, it is required to submit the new alignment along with the tomograms.</p>
+<p><strong>Required Metadata per Run</strong></p>
+<ul class="simple">
+<li><p><strong>Files:</strong></p>
+<ul>
+<li><p>If aligned in IMOD (global alignments)</p>
+<ul>
+<li><p><strong>Required:</strong> XF file</p></li>
+<li><p><strong>Required:</strong> TLT file</p></li>
+<li><p><strong>Optional:</strong> XTILT file, tilt.com file, newst.com file</p></li>
+</ul>
+</li>
+<li><p>If aligned in AreTomo:</p>
+<ul>
+<li><p><strong>Required:</strong> ALN-File</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Method type, one of:</p>
+<ul>
+<li><p>fiducial based</p></li>
+<li><p>patch tracking</p></li>
+<li><p>projection matching</p></li>
+</ul>
+</li>
+<li><p>Alignment type, one of:</p>
+<ul>
+<li><p>Global (rigid transformations only)</p></li>
+<li><p>Local (non-rigid transformations)</p></li>
+</ul>
+</li>
+<li><p>Any alignment parameters not captured by the alignment file, e.g.</p>
+<ul>
+<li><p>Tilt offset</p></li>
+<li><p>Volume origin offset</p></li>
+<li><p>X-tilt offset</p></li>
+</ul>
+</li>
+</ul>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cryoet_ctf.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CryoET Image Processing Challenges</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cdpo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">CryoET Data Portal Ontology (CDPO)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> None
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-and-publication-process">Submission and Publication Process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata-requirements">Metadata Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary">Glossary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-of-full-datasets">Contribution of Full Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deposition-dataset-group">Deposition (Dataset Group)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#movie-stacks-acquisition">Movie Stacks / Acquisition</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tilt-series-required-per-run">Tilt Series (Required per Run)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alignment-required-per-run">Alignment (Required per Run)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tomograms-optional">Tomograms (optional)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#annotations-optional">Annotations (optional)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-of-annotations-for-existing-datasets">Contribution of Annotations for Existing Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deposition-annotation-group">Deposition (Annotation Group)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#annotations">Annotations</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-of-tomograms-for-existing-datasets">Contribution of Tomograms for Existing Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deposition-tomogram-group">Deposition (Tomogram Group)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tomograms-required-per-run">Tomograms (Required per Run)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alignment-required-if-new">Alignment (Required if New)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Biohub and Awesome-ESM Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026 Awesome-ESM Contributors.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
