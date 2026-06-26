@@ -109,20 +109,6 @@ html_theme_options = {
         "code": "Roboto Mono",  # used for literal code blocks
     },
     "version_dropdown": False,  # Set to True if you have versioning
-    
-    # Disable top navigation
-    "primary_sidebar": "left",  # Move sidebar to left
-    "announcement": None,
-    
-    # Logo customization
-    "logo": {
-        "image_light": "_static/Biohub_white_text.png",  # Your dark mode logo
-        "image_dark": "_static/Biohub_black_text.png",   # Your light mode logo
-    },
-    
-    # Sidebar options
-    "sidebar_hide_on_mobile": False,
-    "navigation_with_keys": True,
 }
 
 # Remove icons from toc elements in API page
@@ -161,7 +147,3 @@ ogp_social_cards = {
 ogp_site_url = "https://dgmccart.github.io/Awesome-ESM"
 ogp_site_name = "Awesome-ESM Documentation"
 ogp_image = "_static/img/logo.svg"
-
-# HTML context for custom theme variables
-def setup(app):
-    app.add_config_value('has_custom_sidebar', True, 'html')
