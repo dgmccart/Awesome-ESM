@@ -1,2 +1,52 @@
 {# Main layout template is in `base.html` to match mkdocs-material #}
 {% extends "base.html" %}
+{% extends "!layout.html" %}
+
+{% block body %}
+<div class="layout-wrapper">
+    <!-- Custom Left Sidebar Navigation -->
+    <nav class="custom-left-sidebar">
+        <div class="sidebar-header">
+            {% if theme_mode == 'dark' %}
+                <img src="{{ pathto('_static/biohub-logo-light.png', 1) }}" alt="BioHub" class="sidebar-logo">
+            {% else %}
+                <img src="{{ pathto('_static/biohub-logo-dark.png', 1) }}" alt="BioHub" class="sidebar-logo">
+            {% endif %}
+            <h2>Awesome ESM</h2>
+            <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M3 9l9-7 9 7M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9M9 13h6"/>
+                </svg>
+            </button>
+        </div>
+
+        <ul class="nav-accordion">
+            {% for item in nav_items %}
+                <li class="nav-item">
+                    <a href="{{ item.url }}" class="nav-link">
+                        {% if item.icon %}
+                            <span class="nav-icon">{{ item.icon }}</span>
+                        {% endif %}
+                        <span class="nav-text">{{ item.title }}</span>
+                        {% if item.children %}
+                            <span class="nav-arrow">›</span>
+                        {% endif %}
+                    </a>
+                    {% if item.children %}
+                        <ul class="nav-children">
+                            {% for child in item.children %}
+                                <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        {{ super() }}
+    </main>
+</div>
+{% endblock %}
